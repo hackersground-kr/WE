@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97fde46e-d534-43d3-9326-0ed9edf2fc11" name="Changes" comment="[ADD] Response : Response 생성">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/controller/ReviewApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/member/MemberDeleteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/review/ReviewRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/review/ReviewDeleteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/review/ReviewModifyRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/controller/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/controller/UserApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/comment/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/comment/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/member/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/member/MemberResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/member/MemberResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/BoardRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/ReviewService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
