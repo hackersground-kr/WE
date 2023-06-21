@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97fde46e-d534-43d3-9326-0ed9edf2fc11" name="Changes" comment="[Update] 개발환경재설정">
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/user/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/user/Member.java" afterDir="false" />
+    <list default="true" id="97fde46e-d534-43d3-9326-0ed9edf2fc11" name="Changes" comment="[Update] 개발환경 완료">
+      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/BoardRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -124,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687342184443</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[Update] 개발환경 완료">
+      <created>1687342841455</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687342841455</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +155,7 @@
     <MESSAGE value="[ADD] 각 Entity 연관관계 주입" />
     <MESSAGE value="[UPDATE] 각 Entity 연관관계 수정" />
     <MESSAGE value="[Update] 개발환경재설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Update] 개발환경재설정" />
+    <MESSAGE value="[Update] 개발환경 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Update] 개발환경 완료" />
   </component>
 </project>
