@@ -27,8 +27,7 @@ public class Member {
     private boolean gender;
 
     @Builder
-    public Member(Long id, String userName, String loginId, String passWord, Long birth, boolean gender) {
-        this.id = id;
+    public Member(String userName, String loginId, String passWord, Long birth, boolean gender) {
         this.userName = userName;
         this.loginId = loginId;
         this.passWord = passWord;
