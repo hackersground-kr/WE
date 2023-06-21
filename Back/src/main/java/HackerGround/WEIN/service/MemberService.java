@@ -29,10 +29,16 @@ public class MemberService {
         return member;
     }
 
+    public void save_Temp() {
+        Member member=new Member("1","2","3",123L);
+        memberRepository.save(member);
+    }
+
     public Member update(Long id, MemberModifyResponse memberUpdateResponse) {
         Member member = findById(id).get();
         return member.update(memberUpdateResponse);
     }
+
 
     public void delete(Member member) {
         memberRepository.delete(member);
