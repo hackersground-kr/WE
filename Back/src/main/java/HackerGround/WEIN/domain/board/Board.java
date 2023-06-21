@@ -1,9 +1,11 @@
 package HackerGround.WEIN.domain.board;
 
+import HackerGround.WEIN.api.dto.board.BoardModifyRequest;
 import HackerGround.WEIN.domain.comment.Review;
 import HackerGround.WEIN.domain.picture.BoardPicture;
 import HackerGround.WEIN.domain.member.Member;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -33,11 +35,27 @@ public class Board {
     @OneToMany(mappedBy = "board")
     private List<Review> reviews =new ArrayList<>();
 
-
-
     private String boardTitle;
     private String description;
     private LocalDateTime createTime;
     private Long viewCount;
     private Long heartCount;
+
+    @Builder
+    public Board(Member member,String boardTitle, String description) {
+        this.member=member;
+        this.boardTitle = boardTitle;
+        this.description = description;
+        this.createTime = LocalDateTime.now();
+        this.viewCount = Long.valueOf(0);
+        this.heartCount = Long.valueOf(0);
+    }
+
+    public Board modify(BoardModifyRequest boardModifyRequest) {
+        this.boardTitle=boardModifyRequest.getBoardTitle();
+        this.description=boardModifyRequest.getDescription();
+        return this;
+    }
+
+
 }

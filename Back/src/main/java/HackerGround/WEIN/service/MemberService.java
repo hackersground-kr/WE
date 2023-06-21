@@ -1,7 +1,7 @@
 package HackerGround.WEIN.service;
 
+import HackerGround.WEIN.api.dto.member.MemberModifyResponse;
 import HackerGround.WEIN.api.dto.member.MemberRequest;
-import HackerGround.WEIN.api.dto.member.MemberUpdateResponse;
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +29,7 @@ public class MemberService {
         return member;
     }
 
-    public Member update(Long id, MemberUpdateResponse memberUpdateResponse) {
+    public Member update(Long id, MemberModifyResponse memberUpdateResponse) {
         Member member = findById(id).get();
         return member.update(memberUpdateResponse);
     }

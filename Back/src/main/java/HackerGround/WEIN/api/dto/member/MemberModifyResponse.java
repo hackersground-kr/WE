@@ -3,7 +3,7 @@ package HackerGround.WEIN.api.dto.member;
 import lombok.Data;
 
 @Data
-public class MemberUpdateResponse {
+public class MemberModifyResponse {
 
     private String userName;
     private String loginId;

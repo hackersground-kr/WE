@@ -1,13 +1,15 @@
 package HackerGround.WEIN.domain.member;
 
 
-import HackerGround.WEIN.api.dto.member.MemberUpdateResponse;
+import HackerGround.WEIN.api.dto.member.MemberModifyResponse;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -20,6 +22,7 @@ public class Member {
     @Column(name = "MEMBER_ID")
     private Long id;
 
+    private String token;
     private String userName;
     private String loginId;
     private String passWord;
@@ -32,9 +35,10 @@ public class Member {
         this.loginId = loginId;
         this.passWord = passWord;
         this.birth = birth;
+        this.token= UUID.randomUUID().toString();
     }
 
-    public Member update(MemberUpdateResponse member) {
+    public Member update(MemberModifyResponse member) {
         this.userName = member.getUserName();
         this.loginId = member.getLoginId();
         this.passWord=member.getPassword();
