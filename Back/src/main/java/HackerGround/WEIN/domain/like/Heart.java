@@ -12,11 +12,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Like {
+public class Heart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "LIKE_ID")
+    @Column(name = "HEART_ID")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -28,7 +28,7 @@ public class Like {
     private Board board;
 
     @Builder
-    public Like(Member member, Board board) {
+    public Heart(Member member, Board board) {
         this.member = member;
         this.board = board;
     }

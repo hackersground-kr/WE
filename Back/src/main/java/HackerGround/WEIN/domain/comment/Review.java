@@ -2,6 +2,7 @@ package HackerGround.WEIN.domain.comment;
 
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.picture.ReviewPicture;
+import HackerGround.WEIN.domain.user.Member;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -26,6 +27,10 @@ public class Review {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BOARD_ID")
     private Board board;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "MEMBER_ID")
+    private Member member;
 
     @Nullable
     @OneToMany(mappedBy = "review")
