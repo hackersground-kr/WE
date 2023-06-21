@@ -1,4 +1,4 @@
-package HackerGround.WEIN.domain.board;
+package HackerGround.WEIN.domain.picture;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,15 +14,13 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Board {
+public class BoardPicture {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String boardTitle;
-    private String description;
+    private String fileName;
+    private String filePath;
     private LocalDateTime createTime;
-    private Long viewCount;
-
 }
