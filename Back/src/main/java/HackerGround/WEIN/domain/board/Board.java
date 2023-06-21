@@ -1,10 +1,9 @@
 package HackerGround.WEIN.domain.board;
 
-import HackerGround.WEIN.domain.comment.Comment;
+import HackerGround.WEIN.domain.comment.Review;
 import HackerGround.WEIN.domain.like.Like;
 import HackerGround.WEIN.domain.picture.BoardPicture;
-import HackerGround.WEIN.domain.user.User;
-import jakarta.annotation.Nullable;
+import HackerGround.WEIN.domain.user.Member;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,13 +26,13 @@ public class Board {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
-    private User user;
+    private Member member;
 
     @OneToMany(mappedBy = "board")
     private List<BoardPicture> boardPictures=new ArrayList<>();
 
     @OneToMany(mappedBy = "board")
-    private List<Comment> comments=new ArrayList<>();
+    private List<Review> reviews =new ArrayList<>();
 
     @OneToMany(mappedBy = "board")
     private List<Like> likes=new ArrayList<>();

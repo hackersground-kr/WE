@@ -1,6 +1,6 @@
 package HackerGround.WEIN.domain.picture;
 
-import HackerGround.WEIN.domain.comment.Comment;
+import HackerGround.WEIN.domain.comment.Review;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,16 +12,16 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CommentPicture {
+public class ReviewPicture {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "COMMENTPIC_ID")
+    @Column(name = "REVIEWPIC_ID")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "COMMENT_ID")
-    private Comment comment;
+    @JoinColumn(name = "REVIEW_ID")
+    private Review review;
 
     private String fileName;
     private String filePath;

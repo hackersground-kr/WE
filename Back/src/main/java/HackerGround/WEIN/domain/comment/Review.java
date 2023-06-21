@@ -1,7 +1,7 @@
 package HackerGround.WEIN.domain.comment;
 
 import HackerGround.WEIN.domain.board.Board;
-import HackerGround.WEIN.domain.picture.CommentPicture;
+import HackerGround.WEIN.domain.picture.ReviewPicture;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -16,11 +16,11 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Comment {
+public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "COMMENT_ID")
+    @Column(name = "REVIEW_ID")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -28,10 +28,8 @@ public class Comment {
     private Board board;
 
     @Nullable
-    @OneToMany(mappedBy = "comment")
-    private List<CommentPicture> commentPictureList=new ArrayList<>();
-
-    private Long userId;
+    @OneToMany(mappedBy = "review")
+    private List<ReviewPicture> reviewPictureList =new ArrayList<>();
 
     private String title;
     private String description;
