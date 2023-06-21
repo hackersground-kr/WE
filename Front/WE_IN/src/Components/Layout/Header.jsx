@@ -40,7 +40,7 @@ function ResponsiveAppBar() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#2F6731", // 원하는 색상으로 변경
+        main: "#20C997", // 원하는 색상으로 변경
       },
     },
   });
@@ -61,7 +61,7 @@ function ResponsiveAppBar() {
                 display: { xs: "none", md: "flex" },
                 fontWeight: 700,
                 letterSpacing: ".0rem",
-                color: "inherit",
+                color: "white",
                 textDecoration: "none",
               }}
             >

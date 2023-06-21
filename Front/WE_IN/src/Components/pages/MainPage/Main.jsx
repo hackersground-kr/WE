@@ -1,8 +1,6 @@
 import Layout from "../../Layout/Layout";
-// import SimpleSlider from "./components/Carousel";
 import Menu from "./components/Menu";
 import "./Main.css";
-import MainBanner from "../../../assets/MainPageImage.png";
 import Accordion from "./components/Accordion";
 import Meow from "../../../assets/meow.png";
 import camera from "../../../assets/camera.jpg";
@@ -12,7 +10,7 @@ import food from "../../../assets/food.jpg";
 import draw from "../../../assets/draw.jpg";
 import book from "../../../assets/book.jpg";
 // import ReadingGlass from "../../../assets/search.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Main = () => {
   const [enteredSearch, setEnteredSearch] = useState("");
@@ -20,11 +18,40 @@ const Main = () => {
   const searchChangeHandler = (event) => {
     setEnteredSearch(event.target.value);
   };
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.body.scrollHeight;
+      const progress = scrollPosition / (documentHeight - windowHeight);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div>
+    <div
+      className="container"
+      style={{ backgroundColor: `rgba(0, 0, 0, ${1 - scrollProgress})` }}
+    >
       <Layout />
-      <img src={MainBanner} alt="banner1" className="Ad" />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="bannerTitle1">WE IN</div>
+      <div className="bannerTitle2">새로운 배움과 새로운 경험을</div>
+      <div className="bannerTitle3">경험하세요</div>
 
       <br />
       <br />
@@ -32,16 +59,20 @@ const Main = () => {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
       <div className="Main-title">
         <h1>딱 맞는 노인 전문가를 찾아 드립니다!</h1>
         <div className="search">
-          <input
-            className="searchWord"
-            type="text"
-            value={enteredSearch}
-            onChange={searchChangeHandler}
-            placeholder="어떤 분야의 전문가를 찾으시나요?"
-          />
+          <div className="searchWord">
+            {" "}
+            <span>∣</span>어떤 분야의 전문가를 찾으시나요?
+          </div>
         </div>
       </div>
       <br />
@@ -88,7 +119,9 @@ const Main = () => {
         <div className="SectionBox">
           <div className="SectionContents1">
             <img src={food} alt="food" />
-            <h4>전직 미슐랭 요리사와 함께 하는 <br/> 이탈리아 가정식 클래스</h4>
+            <h4>
+              전직 미슐랭 요리사와 함께 하는 <br /> 이탈리아 가정식 클래스
+            </h4>
             <p>요리·음료 | 요리왕효성</p>
           </div>
           <div className="SectionContents2">
@@ -108,7 +141,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    
+
       <br />
       <br />
       <br />
