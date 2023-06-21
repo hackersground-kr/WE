@@ -4,6 +4,7 @@ import HackerGround.WEIN.dto.board.BoardModifyRequest;
 import HackerGround.WEIN.domain.comment.Review;
 import HackerGround.WEIN.domain.picture.BoardPicture;
 import HackerGround.WEIN.domain.member.Member;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -37,6 +38,8 @@ public class Board {
 
     private String boardTitle;
     private String description;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd",timezone = "Asia/Seoul")
     private LocalDateTime createTime;
     private Long viewCount;
     private Long heartCount;

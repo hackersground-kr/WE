@@ -25,24 +25,27 @@ public class Member {
     private String userName;
     private String loginId;
     private String passWord;
-    private Long birth;
-    private boolean gender;
+    private Integer birth;
+
+    @Enumerated(EnumType.STRING)
+    private MemberType memberType;
 
 
     @Builder
-    public Member(String userName, String loginId, String passWord, Long birth) {
+    public Member(String userName, String loginId, String passWord, Integer birth,MemberType memberType) {
         this.userName = userName;
         this.loginId = loginId;
         this.passWord = passWord;
         this.birth = birth;
+        System.out.println(memberType);
+        this.memberType=memberType;
         this.token= UUID.randomUUID().toString();
     }
 
-    public Member update(MemberModifyRequest member) {
+    public void update(MemberModifyRequest member) {
         this.userName = member.getUserName();
         this.loginId = member.getLoginId();
         this.passWord=member.getPassword();
         this.birth=member.getBirth();
-        return this;
     }
 }

@@ -1,5 +1,6 @@
 package HackerGround.WEIN.service;
 
+import HackerGround.WEIN.dto.member.MemberModifyRequest;
 import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.repository.BoardRepository;
@@ -16,7 +17,6 @@ import java.util.Optional;
 public class MemberService {
     private final MemberRepository memberRepository;
     private final BoardRepository boardRepository;
-    private final ReviewRepository reviewRepository;
 
     public Member findByToken(String token) {
         return memberRepository.findMemberByToken(token);
@@ -28,15 +28,18 @@ public class MemberService {
     }
 
     public Member save(MemberRequest memberRequest) {
+        String memberType = memberRequest.getStatus();
+        System.out.println(memberType);
+
         Member member = memberRequest.to_Entity();
         memberRepository.save(member);
         return member;
     }
 
-//    public Member update(Long id, MemberModifyResponse memberUpdateResponse) {
-////        Member member = findById(id).get();
-//        return member.update(memberUpdateResponse);
-//    }
+    public void update(MemberModifyRequest request) {
+        Member findMember = memberRepository.findMemberByToken(request.getToken());
+        findMember.update(request);
+    }
 
 
     public void delete(Member member) {

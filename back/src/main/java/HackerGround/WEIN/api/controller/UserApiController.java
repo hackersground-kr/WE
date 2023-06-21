@@ -85,9 +85,13 @@ public class UserApiController {
      * 유저 프로필 수정
      */
     @PutMapping("/member")
-    public CommonResult modify(@RequestBody MemberModifyRequest memberModifyRequest) {
-        Member member = memberService.findByToken(memberModifyRequest.getToken());
-        member.update(memberModifyRequest);
+    public CommonResult modify(@RequestBody MemberModifyRequest memberModifyRequest,
+                               BindingResult bindingResult) {
+
+        if(bindingResult.hasErrors()) {
+            return responseService.getFailResult();
+        }
+        memberService.update(memberModifyRequest);
         return responseService.getSuccessResult();
     }
 }

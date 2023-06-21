@@ -9,13 +9,10 @@ import java.util.Optional;
 @Data
 public class MemberResponse {
 
-    @NotBlank(message = "Name is Essential")
     private String userName;
-    @NotBlank(message = "ID is Essential")
     private String loginId;
-    @NotBlank(message = "Password is Essential")
     private String password;
-    private Long birth;
+    private Integer birth;
     private String gender;
 
     public MemberResponse(Member member) {
