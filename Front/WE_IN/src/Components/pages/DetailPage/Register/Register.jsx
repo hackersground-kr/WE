@@ -23,6 +23,7 @@ import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
+import TextField from "@mui/material/TextField";
 
 /*
 import Download from "@mui/icons-material/Download";
@@ -136,9 +137,18 @@ const Register = () => {
               aria-labelledby="alert-dialog-title"
               aria-describedby="alert-dialog-description"
             >
-              <DialogTitle id="alert-dialog-title">{"날짜 선택"}</DialogTitle>
+              <DialogTitle id="alert-dialog-title">
+                {"신청 폼 작성"}
+              </DialogTitle>
               <DialogContent>
-                <DialogContentText id="alert-dialog-description">
+                <TextField
+                  id="outlined-basic"
+                  label="이름을 입력해주세요."
+                  variant="outlined"
+                  sx={{ width: 300, mt: 1 }}
+                />
+
+                <DialogContentText id="alert-dialog-description" sx={{ mt: 1 }}>
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={["DateTimePicker"]}>
                       <DateTimePicker label="일정과 시간을 선택해주세요." />
