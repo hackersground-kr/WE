@@ -13,6 +13,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import Header from "/src/Components/Layout/Header";
 
 /*
 import Download from "@mui/icons-material/Download";
@@ -66,73 +67,76 @@ const Register = () => {
   };
 
   return (
-    <Box
-      sx={{
-        alignSelf: "center",
-        maxWidth: "100%",
-        minWidth: { xs: 220, sm: 360, md: 768, lg: 992, xl: 1200 },
-        mx: "auto",
-        overflow: "auto",
-      }}
-    >
-      <Sheet sx={{ p: 2 }}>
-        <Sheet
-          variant="outlined"
-          sx={{
-            borderRadius: "md",
-            overflow: "auto",
-            borderColor: "background.level2",
-            bgcolor: "background.level1",
-          }}
-        >
-          <AspectRatio>
-            <img alt="" src="/static/images/meow.jpg" />
-          </AspectRatio>
-        </Sheet>
-      </Sheet>
-
-      <Breadcrumbs aria-label="breadcrumb" sx={{ mt: 3, mb: -2 }}>
-        <Link underline="hover" color="inherit" href="/">
-          반려동물
-        </Link>
-        <Typography color="text.primary">고양이</Typography>
-      </Breadcrumbs>
-
-      <Box sx={{ mt: 3, mb: 4 }}>
-        <Stack direction="row" spacing={2} justifyContent="space-between">
-          <Typography level="h2" textAlign="left">
-            고양이와 함께하는 반려동물 원데이클래스
-          </Typography>
-          <Button variant="contained" size="large">
-            지금 수강하러 가기
-          </Button>
-        </Stack>
-      </Box>
-
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
+    <>
+      <Header />
+      <Box
+        sx={{
+          alignSelf: "center",
+          maxWidth: "100%",
+          minWidth: { xs: 220, sm: 360, md: 768, lg: 992, xl: 1200 },
+          mx: "auto",
+          overflow: "auto",
+        }}
+      >
+        <Sheet sx={{ p: 2 }}>
+          <Sheet
+            variant="outlined"
+            sx={{
+              borderRadius: "md",
+              overflow: "auto",
+              borderColor: "background.level2",
+              bgcolor: "background.level1",
+            }}
           >
-            <Tab label="상세보기" {...a11yProps(0)} />
-            <Tab label="커리큘럼" {...a11yProps(1)} />
-            <Tab label="리뷰" {...a11yProps(2)} />
-          </Tabs>
+            <AspectRatio>
+              <img alt="" src="/static/images/meow.jpg" />
+            </AspectRatio>
+          </Sheet>
+        </Sheet>
+
+        <Breadcrumbs aria-label="breadcrumb" sx={{ mt: 3, mb: -2 }}>
+          <Link underline="hover" color="inherit" href="/">
+            반려동물
+          </Link>
+          <Typography color="text.primary">고양이</Typography>
+        </Breadcrumbs>
+
+        <Box sx={{ mt: 3, mb: 4 }}>
+          <Stack direction="row" spacing={2} justifyContent="space-between">
+            <Typography level="h2" textAlign="left">
+              고양이와 함께하는 반려동물 원데이클래스
+            </Typography>
+            <Button variant="contained" size="large">
+              지금 수강하러 가기
+            </Button>
+          </Stack>
         </Box>
 
-        <TabPanel value={value} index={0}>
-          <LectureInfo />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <LectureCurriculum />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <LectureReview />
-        </TabPanel>
+        <Box sx={{ width: "100%" }}>
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+            >
+              <Tab label="상세보기" {...a11yProps(0)} />
+              <Tab label="커리큘럼" {...a11yProps(1)} />
+              <Tab label="리뷰" {...a11yProps(2)} />
+            </Tabs>
+          </Box>
+
+          <TabPanel value={value} index={0}>
+            <LectureInfo />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <LectureCurriculum />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <LectureReview />
+          </TabPanel>
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 
