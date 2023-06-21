@@ -8,6 +8,9 @@ import Meow from "../../../assets/meow.png";
 import camera from "../../../assets/camera.jpg";
 import coffee from "../../../assets/coffee.jpg";
 import cello from "../../../assets/cello.jpg";
+import food from "../../../assets/food.jpg";
+import draw from "../../../assets/draw.jpg";
+import book from "../../../assets/book.jpg";
 // import ReadingGlass from "../../../assets/search.png";
 import { useState } from "react";
 
@@ -84,19 +87,19 @@ const Main = () => {
         </h1>
         <div className="SectionBox">
           <div className="SectionContents1">
-            <img src={Meow} alt="cat" />
-            <h4>구독자 192만 진용진이 알려드립니다.<br/> 현실적인 유튜브 수익창출 방법!</h4>
-            <p>반려동물·고양이 | 김규회수의사</p>
+            <img src={food} alt="food" />
+            <h4>전직 미슐랭 요리사와 함께 하는 <br/> 이탈리아 가정식 클래스</h4>
+            <p>요리·음료 | 요리왕효성</p>
           </div>
           <div className="SectionContents2">
-            <img src={Meow} alt="cat" />
-            <h4>고양이와 함께하는 반려동물 원데이클래스</h4>
-            <p>반려동물·고양이 | 김규회수의사</p>
+            <img src={draw} alt="draw" />
+            <h4>장휘영의 그림 잘 그리는 법</h4>
+            <p>드로잉 | 장휘영</p>
           </div>
           <div className="SectionContents3">
-            <img src={Meow} alt="cat" />
-            <h4>고양이와 함께하는 반려동물 원데이클래스</h4>
-            <p>반려동물·고양이 | 김규회수의사</p>
+            <img src={book} alt="book" />
+            <h4>오래 남는 독서, 채교수의 독쓰</h4>
+            <p>라이프스타일 | 채교수</p>
           </div>
           <div className="SectionContents4">
             <img src={Meow} alt="cat" />
