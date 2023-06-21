@@ -3,6 +3,7 @@ package HackerGround.WEIN.domain.like;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.user.Member;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,13 +20,16 @@ public class Like {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="MEMBER_ID")
+    @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="BOARD_ID")
+    @JoinColumn(name = "BOARD_ID")
     private Board board;
 
-
-    private Long count;
+    @Builder
+    public Like(Member member, Board board) {
+        this.member = member;
+        this.board = board;
+    }
 }

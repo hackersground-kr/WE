@@ -1,7 +1,6 @@
 package HackerGround.WEIN.domain.board;
 
 import HackerGround.WEIN.domain.comment.Review;
-import HackerGround.WEIN.domain.like.Like;
 import HackerGround.WEIN.domain.picture.BoardPicture;
 import HackerGround.WEIN.domain.user.Member;
 import jakarta.persistence.*;
@@ -25,7 +24,7 @@ public class Board {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USER_ID")
+    @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
     @OneToMany(mappedBy = "board")
@@ -34,13 +33,11 @@ public class Board {
     @OneToMany(mappedBy = "board")
     private List<Review> reviews =new ArrayList<>();
 
-    @OneToMany(mappedBy = "board")
-    private List<Like> likes=new ArrayList<>();
 
 
     private String boardTitle;
     private String description;
     private LocalDateTime createTime;
     private Long viewCount;
-
+    private Long heartCount;
 }

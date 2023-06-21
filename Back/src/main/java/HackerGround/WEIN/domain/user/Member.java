@@ -2,7 +2,6 @@ package HackerGround.WEIN.domain.user;
 
 
 import HackerGround.WEIN.domain.board.Board;
-import HackerGround.WEIN.domain.like.Like;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -22,13 +21,6 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "MEMBER_ID")
     private Long id;
-
-    @OneToMany(mappedBy = "member")
-    private List<Board> board=new ArrayList<>();
-
-    @OneToMany(mappedBy = "member")
-    private List<Like> likes=new ArrayList<>();
-
 
     private String userName;
     private String loginId;
