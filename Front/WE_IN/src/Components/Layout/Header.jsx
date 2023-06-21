@@ -40,14 +40,14 @@ function Header() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#2F6731", // 원하는 색상으로 변경
+        main: "#20C997", // 원하는 색상으로 변경
       },
     },
   });
 
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -61,7 +61,7 @@ function Header() {
                 display: { xs: "none", md: "flex" },
                 fontWeight: 700,
                 letterSpacing: ".0rem",
-                color: "inherit",
+                color: "white",
                 textDecoration: "none",
               }}
             >
