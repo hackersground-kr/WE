@@ -21,7 +21,7 @@ public class UserApiController {
     private final MemberService memberService;
     private final ResponseService responseService;
 
-    @GetMapping("/user/{toekn}")
+    @GetMapping("/user/{token}")
     public SingleResult<MemberResponse> findUserByToken(@PathVariable String token) {
         Member member = memberService.findByToken(token);
         MemberResponse memberResponse = MemberResponse.toDto(member);
