@@ -4,8 +4,6 @@ const LectureInfo = () => {
   return (
     <>
       <Typography textAlign="left">
-        <h1>상세보기</h1>
-
         <h2>환영합니다!</h2>
 
         <p>

@@ -4,7 +4,6 @@ const LectureCurriculum = () => {
   return (
     <>
       <Typography textAlign="left">
-        <h1>커리큘럼</h1>
         <ol>
           <li>
             <h3>반려동물 돌봄 기초</h3>

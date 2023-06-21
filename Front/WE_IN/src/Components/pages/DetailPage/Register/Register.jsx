@@ -11,6 +11,8 @@ import LectureCurriculum from "./dummy/LectureCurriculum";
 import LectureReview from "./dummy/LectureReview";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 /*
 import Download from "@mui/icons-material/Download";
@@ -97,9 +99,14 @@ const Register = () => {
       </Breadcrumbs>
 
       <Box sx={{ mt: 3, mb: 4 }}>
-        <Typography level="h2" textAlign="left">
-          고양이와 함께하는 반려동물 원데이클래스
-        </Typography>
+        <Stack direction="row" spacing={2} justifyContent="space-between">
+          <Typography level="h2" textAlign="left">
+            고양이와 함께하는 반려동물 원데이클래스
+          </Typography>
+          <Button variant="contained" size="large">
+            지금 수강하러 가기
+          </Button>
+        </Stack>
       </Box>
 
       <Box sx={{ width: "100%" }}>
