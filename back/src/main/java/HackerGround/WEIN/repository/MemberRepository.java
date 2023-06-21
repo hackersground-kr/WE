@@ -10,5 +10,5 @@ public interface MemberRepository extends JpaRepository<Member,Long> {
     Member findMemberByToken(String token);
     Member findMemberById(Long id);
 
-    void delete(Optional<Member> member);
+//    void delete(Optional<Member> member);
 }

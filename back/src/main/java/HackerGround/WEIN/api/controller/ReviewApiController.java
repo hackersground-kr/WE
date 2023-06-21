@@ -33,7 +33,7 @@ public class ReviewApiController {
     private final ResponseService responseService;
 
     //단건 조회
-    @GetMapping("/board/{id}")
+    @GetMapping("/review/{id}")
     public SingleResult<ReviewResponse> getOneReview(@PathVariable Long id) throws Exception {
         Review review = reviewService.findById(id).get();
         ReviewResponse reviewResponse = ReviewResponse.toDto(review);

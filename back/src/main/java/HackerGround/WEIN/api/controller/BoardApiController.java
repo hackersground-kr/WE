@@ -119,7 +119,7 @@ public class BoardApiController {
      *
      * 클래스 좋아요 기능
      */
-    @PostMapping("/board/{id")
+    @PostMapping("/board/{id}")
     public CommonResult like(@PathVariable("id") Long id,
                              @Validated HeartRequest request,
                              BindingResult bindingResult) throws Exception {
