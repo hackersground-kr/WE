@@ -9,6 +9,8 @@ import PropTypes from "prop-types";
 import LectureInfo from "./dummy/LectureInfo";
 import LectureCurriculum from "./dummy/LectureCurriculum";
 import LectureReview from "./dummy/LectureReview";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Link from "@mui/material/Link";
 
 /*
 import Download from "@mui/icons-material/Download";
@@ -86,6 +88,13 @@ const Register = () => {
           </AspectRatio>
         </Sheet>
       </Sheet>
+
+      <Breadcrumbs aria-label="breadcrumb" sx={{ mt: 3, mb: -2 }}>
+        <Link underline="hover" color="inherit" href="/">
+          반려동물
+        </Link>
+        <Typography color="text.primary">고양이</Typography>
+      </Breadcrumbs>
 
       <Box sx={{ mt: 3, mb: 4 }}>
         <Typography level="h2" textAlign="left">
