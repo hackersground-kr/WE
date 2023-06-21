@@ -56,4 +56,8 @@ public class ReviewService {
         reviewRepository.delete(review);
     }
 
+    public void deleteBoard(Board board) {
+        reviewRepository.deleteAllByBoard(board);
+    }
+
 }

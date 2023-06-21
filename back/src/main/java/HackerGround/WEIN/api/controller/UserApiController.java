@@ -25,6 +25,10 @@ public class UserApiController {
     private final MemberService memberService;
     private final ResponseService responseService;
 
+    /**
+     *
+     * 유저 검색
+     */
     @GetMapping("/member/{token}")
     public SingleResult<MemberResponse> findUserByToken(@PathVariable String token) {
         Member member = memberService.findByToken(token);
@@ -32,6 +36,10 @@ public class UserApiController {
         return responseService.getSingleResult(memberResponse);
     }
 
+    /**
+     *
+     * 유저 전체 검색
+     */
     @PostMapping("/member")
     public CommonResult save(@Validated @RequestBody MemberRequest request, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
@@ -42,6 +50,11 @@ public class UserApiController {
         return responseService.getSuccessResult();
     }
 
+    /**
+     *
+     *
+     * 유저 삭제
+     */
     @DeleteMapping("/member")
     public CommonResult delete(@Validated @RequestBody MemberDeleteRequest request,BindingResult bindingResult) {
 
@@ -53,6 +66,10 @@ public class UserApiController {
         return responseService.getSuccessResult();
     }
 
+    /**
+     *
+     * 유저 프로필 수정
+     */
     @PutMapping("/member")
     public CommonResult modify(@RequestBody MemberModifyRequest memberModifyRequest) {
         Member member = memberService.findByToken(memberModifyRequest.getToken());

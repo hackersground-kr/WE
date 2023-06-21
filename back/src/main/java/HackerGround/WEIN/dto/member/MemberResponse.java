@@ -1,6 +1,7 @@
 package HackerGround.WEIN.dto.member;
 
 import HackerGround.WEIN.domain.member.Member;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 import java.util.Optional;
@@ -8,8 +9,11 @@ import java.util.Optional;
 @Data
 public class MemberResponse {
 
+    @NotBlank(message = "Name is Essential")
     private String userName;
+    @NotBlank(message = "ID is Essential")
     private String loginId;
+    @NotBlank(message = "Password is Essential")
     private String password;
     private Long birth;
     private String gender;

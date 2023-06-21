@@ -4,11 +4,11 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class BoardModifyRequest {
+public class BoardDeleteRequest {
 
-    @NotBlank(message = "token is essential")
+
+    @NotBlank
     private String token;
 
-    private String boardTitle;
-    private String description;
+
 }

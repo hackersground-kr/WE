@@ -1,11 +1,13 @@
 package HackerGround.WEIN.service;
 
+import HackerGround.WEIN.dto.board.BoardDeleteRequest;
 import HackerGround.WEIN.dto.board.BoardModifyRequest;
 import HackerGround.WEIN.dto.board.BoardRequest;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.repository.BoardRepository;
 import HackerGround.WEIN.repository.MemberRepository;
+import HackerGround.WEIN.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,7 @@ import static lombok.Lombok.checkNotNull;
 @RequiredArgsConstructor
 public class BoardService {
 
+    private final ReviewRepository reviewRepository;
     private final MemberRepository memberRepository;
     private final BoardRepository boardRepository;
 
@@ -32,10 +35,16 @@ public class BoardService {
         return boardById.modify(boardModifyRequest);
     }
 
-    public void delete(Long id) {
-        Board board = boardRepository.findBoardById(id);
-        boardRepository.delete(board);
+    public void delete(Long id,BoardDeleteRequest request) throws Exception {
 
+        Board board = boardRepository.findBoardById(id);
+        Member member = memberRepository.findMemberByToken(request.getToken());
+        if(!board.getMember().equals(member)) {
+            throw new Exception();
+        }
+
+        reviewRepository.deleteAllByBoard(board);
+        boardRepository.delete(board);
     }
 
     public void add_HeartCount(Long id) {
@@ -44,7 +53,6 @@ public class BoardService {
     }
 
     public Board findById(Long id) throws Exception {
-        checkNotNull(id,"board");
         return boardRepository.findById(id).orElseThrow(() -> new Exception("Could not found"));
     }
 
