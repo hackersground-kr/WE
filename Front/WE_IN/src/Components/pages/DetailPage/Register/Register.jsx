@@ -1,13 +1,15 @@
+import * as React from "react";
 import AspectRatio from "@mui/joy/AspectRatio";
 import Box from "@mui/joy/Box";
 import Sheet from "@mui/joy/Sheet";
-import Tabs from "@mui/joy/Tabs";
-import TabList from "@mui/joy/TabList";
-import Tab, { tabClasses } from "@mui/joy/Tab";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 import Typography from "@mui/joy/Typography";
+import PropTypes from "prop-types";
 import LectureInfo from "./dummy/LectureInfo";
 import LectureCurriculum from "./dummy/LectureCurriculum";
 import LectureReview from "./dummy/LectureReview";
+
 /*
 import Download from "@mui/icons-material/Download";
 import InsertLink from "@mui/icons-material/InsertLink";
@@ -16,10 +18,49 @@ import Button from "@mui/joy/Button";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import IconButton from "@mui/joy/IconButton";
 import Close from "@mui/icons-material/Close";
-
+import TabList from "@mui/joy/TabList";
 */
 
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
 const Register = () => {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <Box
       sx={{
@@ -52,120 +93,29 @@ const Register = () => {
         </Typography>
       </Box>
 
-      <Tabs
-        defaultValue={0}
-        sx={{
-          bgcolor: "background.body",
-          "--Tab-height": "48px",
-        }}
-      >
-        <Box
-          sx={{
-            "--_shadow-height": "16px",
-            height: 0,
-            position: "sticky",
-            top: "calc(var(--Tab-height) - var(--main-paddingTop, 0px) + var(--Header-height, 0px) - (var(--_shadow-height) / 2))",
-            zIndex: 1,
-            "&::before": {
-              content: '""',
-              display: "block",
-              position: "relative",
-              zIndex: 1,
-              height: "var(--_shadow-height)",
-              background:
-                "radial-gradient(closest-side, rgba(0 0 0 / 0.12), transparent 100%)",
-            },
-          }}
-        />
-        <TabList
-          variant="plain"
-          size="sm"
-          sx={(theme) => ({
-            "--List-padding": "0px",
-            "--ListItem-minHeight": "var(--Tab-height)",
-            "--Chip-minHeight": "20px",
-            "--_TabList-bg": theme.vars.palette.background.body,
-            backgroundColor: "var(--_TabList-bg)",
-            boxShadow: `inset 0 -1px 0 0 ${theme.vars.palette.divider}`,
-            position: "sticky",
-            top: "calc(-1 * (var(--main-paddingTop, 0px) - var(--Header-height, 0px)))",
-            zIndex: 10,
-            width: "100%",
-            overflow: "auto hidden",
-            alignSelf: "flex-start",
-            borderRadius: 0,
-            scrollSnapType: "inline",
-            "&::after": {
-              pointerEvents: "none",
-              display: { xs: "block", sm: "none" },
-              content: '""',
-              position: "sticky",
-              top: 0,
-              width: 40,
-              flex: "none",
-              zIndex: 1,
-              right: 0,
-              borderBottom: "1px solid transparent",
-              background: `linear-gradient(to left, var(--_TabList-bg), rgb(0 0 0 / 0))`,
-              backgroundClip: "content-box",
-            },
-            "&::-webkit-scrollbar": {
-              width: 0,
-              display: "none",
-            },
-            [`& .${tabClasses.root}`]: {
-              "&:first-of-type": {
-                ml: "calc(-1 * var(--ListItem-paddingX))",
-              },
-              scrollSnapAlign: "start",
-              bgcolor: "transparent",
-              boxShadow: "none",
-              flex: "none",
-              "&:hover": {
-                bgcolor: "transparent",
-              },
-              [`&.${tabClasses.selected}`]: {
-                color: "#2F6731",
-                "&:before": {
-                  content: '""',
-                  display: "block",
-                  position: "absolute",
-                  zIndex: 1,
-                  bottom: 0,
-                  left: "var(--ListItem-paddingLeft)",
-                  right: "var(--ListItem-paddingRight)",
-                  height: "2px",
-                  bgcolor: "#2F6731",
-                },
-              },
-            },
-          })}
-        >
-          <Tab value={0}>상세보기</Tab>
-          <Tab value={1}>커리큘럼</Tab>
-          <Tab value={2}>리뷰</Tab>
-        </TabList>
-
-        <Box
-          sx={{
-            pt: 1,
-            pb: 10,
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "100%",
-            },
-            columnGap: { xs: 2, sm: 3, md: 4 },
-            rowGap: { xs: 2, sm: 2.5 },
-            "& > hr": {
-              gridColumn: "1/-1",
-            },
-          }}
-        >
-          <LectureInfo></LectureInfo>
-          <LectureCurriculum></LectureCurriculum>
-          <LectureReview></LectureReview>
+      <Box sx={{ width: "100%" }}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+          >
+            <Tab label="상세보기" {...a11yProps(0)} />
+            <Tab label="커리큘럼" {...a11yProps(1)} />
+            <Tab label="리뷰" {...a11yProps(2)} />
+          </Tabs>
         </Box>
-      </Tabs>
+
+        <TabPanel value={value} index={0}>
+          <LectureInfo />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <LectureCurriculum />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <LectureReview />
+        </TabPanel>
+      </Box>
     </Box>
   );
 };

@@ -3,7 +3,7 @@ import Typography from "@mui/joy/Typography";
 const LectureCurriculum = () => {
   return (
     <>
-      <Typography sx={{ mb: 2 }} borderTop="0.5px solid gray" textAlign="left">
+      <Typography textAlign="left">
         <h1>커리큘럼</h1>
         <ol>
           <li>
