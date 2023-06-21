@@ -42,10 +42,10 @@ public class Review {
     private LocalDateTime createdTime;
 
     @Builder
-    public Review(String title, String description) {
+    public Review(String title, String description, LocalDateTime createdTime) {
         this.title = title;
         this.description = description;
-        this.createdTime = LocalDateTime.now();
+        this.createdTime = createdTime;
     }
 
     public Review update(Review review) {

@@ -57,6 +57,6 @@ public class UserApiController {
     public CommonResult modify(@RequestBody MemberModifyRequest memberModifyRequest) {
         Member member = memberService.findByToken(memberModifyRequest.getToken());
         member.update(memberModifyRequest);
-        return responseService.getSuccessResult()
+        return responseService.getSuccessResult();
     }
 }
