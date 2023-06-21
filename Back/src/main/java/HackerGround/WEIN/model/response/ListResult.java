@@ -1,4 +1,4 @@
-package HackerGround.WEIN.domain.model.response;
+package HackerGround.WEIN.model.response;
 
 import lombok.Getter;
 
