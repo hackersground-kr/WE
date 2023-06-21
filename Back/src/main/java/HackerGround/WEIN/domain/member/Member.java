@@ -1,6 +1,7 @@
 package HackerGround.WEIN.domain.member;
 
 
+import HackerGround.WEIN.api.dto.member.MemberUpdateResponse;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Builder;
@@ -33,10 +34,10 @@ public class Member {
         this.birth = birth;
     }
 
-    public Member update(Member member) {
+    public Member update(MemberUpdateResponse member) {
         this.userName = member.getUserName();
         this.loginId = member.getLoginId();
-        this.passWord=member.getPassWord();
+        this.passWord=member.getPassword();
         this.birth=member.getBirth();
         return this;
     }
