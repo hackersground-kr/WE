@@ -14,6 +14,15 @@ import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Header from "/src/Components/Layout/Header";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 
 /*
 import Download from "@mui/icons-material/Download";
@@ -24,6 +33,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import IconButton from "@mui/joy/IconButton";
 import Close from "@mui/icons-material/Close";
 import TabList from "@mui/joy/TabList";
+import LectureApplyDialog from './dummy/LectureApplyDialog';
 */
 
 function TabPanel(props) {
@@ -61,6 +71,15 @@ function a11yProps(index) {
 
 const Register = () => {
   const [value, setValue] = React.useState(0);
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -98,7 +117,9 @@ const Register = () => {
           <Link underline="hover" color="inherit" href="/">
             반려동물
           </Link>
-          <Typography color="text.primary">고양이</Typography>
+          <Typography color="text.primary">
+            고양이 &nbsp;| &nbsp;김규회수의사
+          </Typography>
         </Breadcrumbs>
 
         <Box sx={{ mt: 3, mb: 4 }}>
@@ -106,9 +127,32 @@ const Register = () => {
             <Typography level="h2" textAlign="left">
               고양이와 함께하는 반려동물 원데이클래스
             </Typography>
-            <Button variant="contained" size="large">
+            <Button variant="contained" size="large" onClick={handleClickOpen}>
               지금 수강하러 가기
             </Button>
+            <Dialog
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+            >
+              <DialogTitle id="alert-dialog-title">{"날짜 선택"}</DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DemoContainer components={["DateTimePicker"]}>
+                      <DateTimePicker label="일정과 시간을 선택해주세요." />
+                    </DemoContainer>
+                  </LocalizationProvider>
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose}>취소</Button>
+                <Button onClick={handleClose} autoFocus>
+                  신청
+                </Button>
+              </DialogActions>
+            </Dialog>
           </Stack>
         </Box>
 
