@@ -6,12 +6,14 @@ import HackerGround.WEIN.dto.board.BoardDeleteRequest;
 import HackerGround.WEIN.dto.board.BoardModifyRequest;
 import HackerGround.WEIN.dto.board.BoardRequest;
 import HackerGround.WEIN.dto.board.BoardResponse;
+import HackerGround.WEIN.dto.heart.HeartRequest;
 import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.dto.member.MemberResponse;
 import HackerGround.WEIN.model.response.CommonResult;
 import HackerGround.WEIN.model.response.ListResult;
 import HackerGround.WEIN.model.response.SingleResult;
 import HackerGround.WEIN.service.BoardService;
+import HackerGround.WEIN.service.HeartService;
 import HackerGround.WEIN.service.MemberService;
 import HackerGround.WEIN.service.ResponseService;
 import lombok.RequiredArgsConstructor;
@@ -31,6 +33,8 @@ public class BoardApiController {
     private final BoardService boardService;
     private final ResponseService responseService;
 
+    private final HeartService heartService;
+
     /**
      *
      * 단건 조회
@@ -38,6 +42,7 @@ public class BoardApiController {
     @GetMapping("/board/{id}")
     public SingleResult<BoardResponse> getOneBoard(@PathVariable Long id) throws Exception {
         Board board = boardService.findById(id);
+        board.updateViewCount();
         BoardResponse boardResponse = BoardResponse.toDto(board);
         return responseService.getSingleResult(boardResponse);
     }
@@ -110,6 +115,21 @@ public class BoardApiController {
     }
 
 
+    /**
+     *
+     * 클래스 좋아요 기능
+     */
+    @PostMapping("/board/{id")
+    public CommonResult like(@PathVariable("id") Long id,
+                             @Validated HeartRequest request,
+                             BindingResult bindingResult) throws Exception {
+        if(bindingResult.hasErrors()) {
+            return responseService.getFailResult();
+        }
+
+        heartService.clickHeart(id,request);
+        return responseService.getSuccessResult();
+    }
 
 
 }
