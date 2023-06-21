@@ -3,6 +3,7 @@ package HackerGround.WEIN.domain.member;
 
 import HackerGround.WEIN.dto.member.MemberModifyRequest;
 import jakarta.persistence.*;
+import jakarta.transaction.Transactional;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,15 +38,14 @@ public class Member {
         this.loginId = loginId;
         this.passWord = passWord;
         this.birth = birth;
-        System.out.println(memberType);
         this.memberType=memberType;
         this.token= UUID.randomUUID().toString();
     }
 
-    public void update(MemberModifyRequest member) {
-        this.userName = member.getUserName();
-        this.loginId = member.getLoginId();
-        this.passWord=member.getPassword();
-        this.birth=member.getBirth();
+    public void update(String userName,String loginId,String passWord,Integer birth) {
+        this.userName = userName;
+        this.loginId = loginId;
+        this.passWord=passWord;
+        this.birth=birth;
     }
 }

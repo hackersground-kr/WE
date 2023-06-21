@@ -5,25 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="570a7248-2c4b-425f-99d2-823f1397cf55" name="Changes" comment="[Add] BoardApiController : Member 전체 조회 기능 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/member/MemberType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/api/controller/UserApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/api/controller/UserApiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/board/Board$BoardBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/board/Board$BoardBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/board/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/board/Board.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/member/Member$MemberBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/member/Member$MemberBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/member/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/member/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/member/MemberModifyRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/member/MemberModifyRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/member/MemberRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/member/MemberRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/member/MemberResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/member/MemberResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/service/MemberService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/controller/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/controller/UserApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/board/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/member/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/member/MemberModifyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/member/MemberModifyRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/member/MemberRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/member/MemberRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/member/MemberResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/member/MemberResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/MemberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687364773012</updated>
       <workItem from="1687364779276" duration="1527000" />
-      <workItem from="1687383785409" duration="3328000" />
+      <workItem from="1687383785409" duration="5154000" />
     </task>
     <task id="LOCAL-00001" summary="[Update] ReviewApiController : 오타 수정">
       <created>1687374515496</created>

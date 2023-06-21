@@ -5,7 +5,7 @@ import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.repository.BoardRepository;
 import HackerGround.WEIN.repository.MemberRepository;
-import HackerGround.WEIN.repository.ReviewRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,17 +28,19 @@ public class MemberService {
     }
 
     public Member save(MemberRequest memberRequest) {
-        String memberType = memberRequest.getStatus();
-        System.out.println(memberType);
 
         Member member = memberRequest.to_Entity();
         memberRepository.save(member);
         return member;
     }
 
+    @Transactional
     public void update(MemberModifyRequest request) {
         Member findMember = memberRepository.findMemberByToken(request.getToken());
-        findMember.update(request);
+        findMember.update(request.getUserName(),
+                request.getLoginId(),
+                request.getPassword(),
+                request.getBirth());
     }
 
 
