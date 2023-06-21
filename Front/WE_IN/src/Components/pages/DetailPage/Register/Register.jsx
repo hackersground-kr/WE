@@ -24,6 +24,8 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import TextField from "@mui/material/TextField";
+import MuiAlert from "@mui/material/Alert";
+import Snackbar from "@mui/material/Snackbar";
 
 /*
 import Download from "@mui/icons-material/Download";
@@ -73,6 +75,7 @@ function a11yProps(index) {
 const Register = () => {
   const [value, setValue] = React.useState(0);
   const [open, setOpen] = React.useState(false);
+  const [open_a, setOpen_a] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -82,9 +85,26 @@ const Register = () => {
     setOpen(false);
   };
 
+  const handleClickAlert = () => {
+    setOpen_a(true);
+    setOpen(false);
+  };
+
+  const handleClickAlertClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen_a(false);
+  };
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
 
   return (
     <>
@@ -131,6 +151,19 @@ const Register = () => {
             <Button variant="contained" size="large" onClick={handleClickOpen}>
               지금 수강하러 가기
             </Button>
+            <Snackbar
+              open={open_a}
+              autoHideDuration={6000}
+              onClose={handleClickAlertClose}
+            >
+              <Alert
+                onClose={handleClickAlertClose}
+                severity="success"
+                sx={{ width: "100%" }}
+              >
+                수강 신청이 완료되었습니다.
+              </Alert>
+            </Snackbar>
             <Dialog
               open={open}
               onClose={handleClose}
@@ -158,7 +191,7 @@ const Register = () => {
               </DialogContent>
               <DialogActions>
                 <Button onClick={handleClose}>취소</Button>
-                <Button onClick={handleClose} autoFocus>
+                <Button onClick={handleClickAlert} autoFocus>
                   신청
                 </Button>
               </DialogActions>
