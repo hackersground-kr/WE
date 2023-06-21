@@ -37,7 +37,7 @@ public class Board {
     private List<Like> likes=new ArrayList<>();
 
 
-
+    private String yodayeong;
     private String boardTitle;
     private String description;
     private LocalDateTime createTime;
