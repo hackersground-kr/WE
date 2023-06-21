@@ -18,7 +18,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 const pages = ["카테고리", "내 주변 클래스"];
 const settings = ["회원가입", "로그인"];
 
-function ResponsiveAppBar() {
+function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -169,4 +169,4 @@ function ResponsiveAppBar() {
     </ThemeProvider>
   );
 }
-export default ResponsiveAppBar;
+export default Header;
