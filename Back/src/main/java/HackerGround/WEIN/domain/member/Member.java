@@ -27,11 +27,18 @@ public class Member {
     private boolean gender;
 
     @Builder
-    public Member(String userName, String loginId, String passWord, Long birth, boolean gender) {
+    public Member(String userName, String loginId, String passWord, Long birth) {
         this.userName = userName;
         this.loginId = loginId;
         this.passWord = passWord;
         this.birth = birth;
-        this.gender = gender;
+    }
+
+    public Member update(Member member) {
+        this.userName = member.getUserName();
+        this.loginId = member.getLoginId();
+        this.passWord=member.getPassWord();
+        this.birth=member.getBirth();
+        return this;
     }
 }
