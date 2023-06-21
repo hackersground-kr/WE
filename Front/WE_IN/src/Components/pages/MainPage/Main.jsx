@@ -13,11 +13,6 @@ import book from "../../../assets/book.jpg";
 import { useState, useEffect } from "react";
 
 const Main = () => {
-  const [enteredSearch, setEnteredSearch] = useState("");
-
-  const searchChangeHandler = (event) => {
-    setEnteredSearch(event.target.value);
-  };
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
@@ -38,7 +33,7 @@ const Main = () => {
   return (
     <div
       className="container"
-      style={{ backgroundColor: `rgba(0, 0, 0, ${1 - scrollProgress})` }}
+      style={{ backgroundColor: `rgba(14, 17, 37, ${1 - scrollProgress})` }}
     >
       <Layout />
       <br />
