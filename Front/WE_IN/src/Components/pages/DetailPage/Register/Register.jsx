@@ -112,7 +112,7 @@ const Register = () => {
       <Box
         sx={{
           alignSelf: "center",
-          maxWidth: "100%",
+          maxWidth: "90%",
           minWidth: { xs: 220, sm: 360, md: 768, lg: 992, xl: 1200 },
           mx: "auto",
           overflow: "auto",
@@ -129,7 +129,7 @@ const Register = () => {
             }}
           >
             <AspectRatio>
-              <img alt="" src="/static/images/meow.jpg" />
+              <img alt="" src="/src/assets/meow.png" />
             </AspectRatio>
           </Sheet>
         </Sheet>
