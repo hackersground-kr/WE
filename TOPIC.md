@@ -25,6 +25,13 @@
 - 사회적으로는 노년 인구 증가에 따른 의료, 사회 간접 비용을 절감할 수 있고 일자리 일부 창출에도 도움이 됨. <br> 고령 및 노인인구와의 연결을 통해 세대 차이로 인한 세대간 갈등 완화 및 원활한 소통의 장을 마련할 수 있음.
 
 ## 제품 아키텍처 (이미지)
+[Backend]
+![image](https://github.com/hackersground-kr/WE/assets/87405971/3726737a-6418-4167-ae94-12d6f5cd7eee)
+
+[Frontend]
+
+![image](https://github.com/hackersground-kr/WE/assets/87405971/ed2b0c5b-2a53-428e-9bf6-861617dc5750)
+
 
 
 ## 제품 소개 슬라이드
