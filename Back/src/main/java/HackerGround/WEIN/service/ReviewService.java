@@ -1,7 +1,5 @@
 package HackerGround.WEIN.service;
 
-import HackerGround.WEIN.api.dto.member.MemberModifyResponse;
-import HackerGround.WEIN.api.dto.member.MemberRequest;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.comment.Review;
 import HackerGround.WEIN.domain.member.Member;

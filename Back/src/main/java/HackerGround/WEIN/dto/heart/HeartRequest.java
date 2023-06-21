@@ -1,4 +1,4 @@
-package HackerGround.WEIN.api.dto.heart;
+package HackerGround.WEIN.dto.heart;
 
 
 public class HeartRequest {

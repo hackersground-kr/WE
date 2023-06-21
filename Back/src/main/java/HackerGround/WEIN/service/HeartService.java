@@ -1,6 +1,5 @@
 package HackerGround.WEIN.service;
 
-import HackerGround.WEIN.api.dto.heart.HeartRequest;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.heart.Heart;
 import HackerGround.WEIN.domain.member.Member;
@@ -9,8 +8,6 @@ import HackerGround.WEIN.repository.HeartRepository;
 import HackerGround.WEIN.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

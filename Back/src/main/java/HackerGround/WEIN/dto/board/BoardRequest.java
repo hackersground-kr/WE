@@ -1,9 +1,7 @@
-package HackerGround.WEIN.api.dto.board;
+package HackerGround.WEIN.dto.board;
 
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.member.Member;
-
-import java.time.LocalDateTime;
 
 public class BoardRequest {
 

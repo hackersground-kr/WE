@@ -1,4 +1,4 @@
-package HackerGround.WEIN.api.dto.member;
+package HackerGround.WEIN.dto.member;
 
 import lombok.Data;
 

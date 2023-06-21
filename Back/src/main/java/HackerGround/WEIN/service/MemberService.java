@@ -1,7 +1,7 @@
 package HackerGround.WEIN.service;
 
-import HackerGround.WEIN.api.dto.member.MemberModifyResponse;
-import HackerGround.WEIN.api.dto.member.MemberRequest;
+import HackerGround.WEIN.dto.member.MemberModifyResponse;
+import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;

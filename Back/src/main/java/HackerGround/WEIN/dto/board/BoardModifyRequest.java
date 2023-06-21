@@ -1,4 +1,4 @@
-package HackerGround.WEIN.api.dto.board;
+package HackerGround.WEIN.dto.board;
 
 import lombok.Data;
 

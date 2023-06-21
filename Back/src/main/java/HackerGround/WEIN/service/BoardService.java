@@ -1,19 +1,14 @@
 package HackerGround.WEIN.service;
 
-import HackerGround.WEIN.api.dto.board.BoardModifyRequest;
-import HackerGround.WEIN.api.dto.board.BoardRequest;
+import HackerGround.WEIN.dto.board.BoardModifyRequest;
+import HackerGround.WEIN.dto.board.BoardRequest;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.repository.BoardRepository;
-import HackerGround.WEIN.repository.MemberRepository;
-import jakarta.transaction.Transactional;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 import static lombok.Lombok.checkNotNull;
 

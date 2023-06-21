@@ -1,8 +1,7 @@
 package HackerGround.WEIN.domain.member;
 
 
-import HackerGround.WEIN.api.dto.member.MemberModifyResponse;
-import jakarta.annotation.Nullable;
+import HackerGround.WEIN.dto.member.MemberModifyResponse;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;

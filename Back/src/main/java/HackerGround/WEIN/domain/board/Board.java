@@ -1,6 +1,6 @@
 package HackerGround.WEIN.domain.board;
 
-import HackerGround.WEIN.api.dto.board.BoardModifyRequest;
+import HackerGround.WEIN.dto.board.BoardModifyRequest;
 import HackerGround.WEIN.domain.comment.Review;
 import HackerGround.WEIN.domain.picture.BoardPicture;
 import HackerGround.WEIN.domain.member.Member;

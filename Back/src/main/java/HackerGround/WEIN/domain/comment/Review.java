@@ -1,6 +1,5 @@
 package HackerGround.WEIN.domain.comment;
 
-import HackerGround.WEIN.api.dto.member.MemberModifyResponse;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.picture.ReviewPicture;
 import HackerGround.WEIN.domain.member.Member;
@@ -14,7 +13,6 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Getter
