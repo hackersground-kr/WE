@@ -17,7 +17,6 @@ public class MemberResponse {
         this.loginId = member.getLoginId();
         this.password = member.getPassWord();
         this.birth = member.getBirth();
-
     }
 
     public static MemberResponse toDto(Member member) {

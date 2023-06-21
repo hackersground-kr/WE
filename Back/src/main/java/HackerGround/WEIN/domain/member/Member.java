@@ -23,7 +23,6 @@ public class Member {
     private String loginId;
     private String passWord;
     private Long birth;
-
     private boolean gender;
 
     @Builder
