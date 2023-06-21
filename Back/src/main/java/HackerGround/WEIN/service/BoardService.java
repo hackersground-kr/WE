@@ -9,17 +9,19 @@ import HackerGround.WEIN.repository.MemberRepository;
 import jakarta.transaction.Transactional;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
+import static lombok.Lombok.checkNotNull;
 
 @Service
 @RequiredArgsConstructor
 public class BoardService {
 
     private final BoardRepository boardRepository;
-    private final MemberRepository memberRepository;
 
     public Board register(Member member, BoardRequest boardRequest) {
         Board board = boardRequest.to_Entity(member);
@@ -37,13 +39,18 @@ public class BoardService {
 
     }
 
-    public List<Board> findAll() {
-        return boardRepository.findAll();
-    }
-
     public void add_HeartCount(Long id) {
         Board boardById = boardRepository.findBoardById(id);
         boardById.updateHeartCount();
+    }
+
+    public Board findById(Long id) throws Exception {
+        checkNotNull(id,"board");
+        return boardRepository.findById(id).orElseThrow(() -> new Exception("Could not found"));
+    }
+
+    public List<Board> findAll() {
+        return boardRepository.findAll();
     }
 
 }
