@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97fde46e-d534-43d3-9326-0ed9edf2fc11" name="Changes" comment="[Add] BoardService : 게시판 등록 기능 구현">
+    <list default="true" id="97fde46e-d534-43d3-9326-0ed9edf2fc11" name="Changes" comment="[ADD] Response : Response 생성">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/WEIN.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/WEIN.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/WEIN.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/WEIN.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/WEIN.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +29,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -56,29 +63,87 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hwanghyosung/Documents/GitHub/WE/Back&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;09dcbb6db336279e4f2b3421e346598f&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/hwanghyosung/Documents/GitHub/WE/Back",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "09dcbb6db336279e4f2b3421e346598f",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="HackerGround.WEIN.service" />
+      <recent name="HackerGround.WEIN.repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MemberServiceTest.save_Temp">
+    <configuration name="MemberServiceTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WEIN.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HackerGround.WEIN.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HackerGround.WEIN.service" />
+      <option name="MAIN_CLASS_NAME" value="HackerGround.WEIN.service.MemberServiceTest" />
+      <option name="METHOD_NAME" value="save" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberServiceTest.save_Temp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WEIN.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HackerGround.WEIN.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HackerGround.WEIN.service" />
+      <option name="MAIN_CLASS_NAME" value="HackerGround.WEIN.service.MemberServiceTest" />
+      <option name="METHOD_NAME" value="save_Temp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeinApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WEIN.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HackerGround.WEIN.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="HackerGround.WEIN" />
+      <option name="MAIN_CLASS_NAME" value="HackerGround.WEIN.WeinApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WeinApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="WEIN.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="HackerGround.WEIN.WeinApplication" />
@@ -86,6 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MemberServiceTest.save_Temp" />
+        <item itemvalue="JUnit.WeinApplicationTests" />
+        <item itemvalue="JUnit.MemberServiceTest.save" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -171,7 +243,11 @@
     <MESSAGE value="[Update] 개발환경 완료" />
     <MESSAGE value="[ADD] BoardRepository : BoardRepository 생성" />
     <MESSAGE value="[ADD] Response : Response 생성" />
-    <MESSAGE value="[Add] BoardService : 게시판 등록 기능 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Add] BoardService : 게시판 등록 기능 구현" />
+    <MESSAGE value="[ADD] MemberService : MemberService 회원가입 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] MemberService : MemberService 회원가입 기능 추가" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

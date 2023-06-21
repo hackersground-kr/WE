@@ -1,10 +1,12 @@
 package HackerGround.WEIN.domain.comment;
 
+import HackerGround.WEIN.api.dto.member.MemberModifyResponse;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.picture.ReviewPicture;
 import HackerGround.WEIN.domain.member.Member;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,6 +14,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -39,4 +42,18 @@ public class Review {
     private String title;
     private String description;
     private LocalDateTime createdTime;
+
+    @Builder
+    public Review(String title, String description) {
+        this.title = title;
+        this.description = description;
+        this.createdTime = LocalDateTime.now();
+    }
+
+    public Review update(Review review) {
+        this.title = review.getTitle();
+        this.description = review.getDescription();
+        this.createdTime = review.getCreatedTime();
+        return this;
+    }
 }
