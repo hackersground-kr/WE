@@ -1,5 +1,4 @@
-package HackerGround.WEIN.domain.user;
-
+package HackerGround.WEIN.domain.like;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,15 +12,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class User {
+public class Like {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String userName;
-    private String userId;
-    private String passWord;
-    private Long birth;
-    private boolean gender;
 
+//    foreign key
+    private Long boardId;
+    private Long userId;
+
+    private Long count;
 }
