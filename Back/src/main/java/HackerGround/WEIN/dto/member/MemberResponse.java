@@ -21,7 +21,7 @@ public class MemberResponse {
         this.birth = member.getBirth();
     }
 
-    public static MemberResponse toDto(Optional<Member> member) {
+    public static MemberResponse toDto(Member member) {
         return new MemberResponse(member);
     }
 }

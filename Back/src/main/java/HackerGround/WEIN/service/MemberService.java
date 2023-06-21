@@ -1,6 +1,5 @@
 package HackerGround.WEIN.service;
 
-import HackerGround.WEIN.dto.member.MemberModifyResponse;
 import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.repository.BoardRepository;
@@ -19,7 +18,7 @@ public class MemberService {
     private final BoardRepository boardRepository;
     private final ReviewRepository reviewRepository;
 
-    public Optional<Member> findByToken(String token) {
+    public Member findByToken(String token) {
         return memberRepository.findMemberByToken(token);
     }
 
@@ -40,7 +39,7 @@ public class MemberService {
 //    }
 
 
-    public void delete(Optional<Member> member) {
+    public void delete(Member member) {
         boardRepository.deleteAllByMember(member);
         memberRepository.delete(member);
     }

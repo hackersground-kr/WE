@@ -1,8 +1,7 @@
 package HackerGround.WEIN.domain.member;
 
 
-import HackerGround.WEIN.domain.board.Board;
-import HackerGround.WEIN.dto.member.MemberModifyResponse;
+import HackerGround.WEIN.dto.member.MemberModifyRequest;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -39,7 +38,7 @@ public class Member {
         this.token= UUID.randomUUID().toString();
     }
 
-    public Member update(MemberModifyResponse member) {
+    public Member update(MemberModifyRequest member) {
         this.userName = member.getUserName();
         this.loginId = member.getLoginId();
         this.passWord=member.getPassword();

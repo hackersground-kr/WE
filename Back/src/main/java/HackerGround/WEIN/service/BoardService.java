@@ -5,10 +5,12 @@ import HackerGround.WEIN.dto.board.BoardRequest;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.repository.BoardRepository;
+import HackerGround.WEIN.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import static lombok.Lombok.checkNotNull;
 
@@ -16,10 +18,12 @@ import static lombok.Lombok.checkNotNull;
 @RequiredArgsConstructor
 public class BoardService {
 
+    private final MemberRepository memberRepository;
     private final BoardRepository boardRepository;
 
-    public Board register(Member member, BoardRequest boardRequest) {
-        Board board = boardRequest.to_Entity(member);
+    public Board register(BoardRequest boardRequest) {
+        Member memberByToken = memberRepository.findMemberByToken(boardRequest.getToken());
+        Board board = boardRequest.to_Entity(memberByToken);
         return boardRepository.save(board);
     }
 

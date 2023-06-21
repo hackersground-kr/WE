@@ -3,6 +3,7 @@ package HackerGround.WEIN.api.controller;
 
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.dto.member.MemberDeleteRequest;
+import HackerGround.WEIN.dto.member.MemberModifyRequest;
 import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.dto.member.MemberResponse;
 import HackerGround.WEIN.model.response.CommonResult;
@@ -26,7 +27,7 @@ public class UserApiController {
 
     @GetMapping("/member/{token}")
     public SingleResult<MemberResponse> findUserByToken(@PathVariable String token) {
-        Optional<Member> member = memberService.findByToken(token);
+        Member member = memberService.findByToken(token);
         MemberResponse memberResponse = MemberResponse.toDto(member);
         return responseService.getSingleResult(memberResponse);
     }
@@ -47,8 +48,15 @@ public class UserApiController {
         if(bindingResult.hasErrors()) {
             return responseService.getFailResult();
         }
-        Optional<Member> member = memberService.findByToken(request.getToken());
+        Member member = memberService.findByToken(request.getToken());
         memberService.delete(member);
         return responseService.getSuccessResult();
+    }
+
+    @PutMapping("/member")
+    public CommonResult modify(@RequestBody MemberModifyRequest memberModifyRequest) {
+        Member member = memberService.findByToken(memberModifyRequest.getToken());
+        member.update(memberModifyRequest);
+        return responseService.getSuccessResult()
     }
 }
