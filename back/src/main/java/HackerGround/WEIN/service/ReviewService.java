@@ -4,6 +4,8 @@ import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.comment.Review;
 import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.dto.member.MemberRequest;
+import HackerGround.WEIN.dto.review.ReviewDeleteRequest;
+import HackerGround.WEIN.dto.review.ReviewModifyRequest;
 import HackerGround.WEIN.dto.review.ReviewRequest;
 import HackerGround.WEIN.repository.BoardRepository;
 import HackerGround.WEIN.repository.MemberRepository;
@@ -41,23 +43,31 @@ public class ReviewService {
         return reviewEntity;
     }
 
-//    public Member save(MemberRequest memberRequest) {
-//        Member member = memberRequest.to_Entity();
-//        memberRepository.save(member);
-//        return member;
-//    }
+    public List<Review> findByMemberAndBoard(Member new_member, Board new_board) {
+        Board board = boardRepository.findBoardById(new_board.getId());
+        Member member = memberRepository.findMemberByToken(new_member.getToken());
 
-    public Review update(Long reviewId, Review newReview) throws Exception {
-        Review review = findById(reviewId).get();
-        return review.update(newReview);
+        List<Review> reviews = reviewRepository.findReviewsByMemberAndBoard(member, board);
+        return reviews;
     }
 
-    public void delete(Review review) {
+    public Review update(Long id, ReviewModifyRequest reviewModifyRequest) {
+        Review reviewById = reviewRepository.findById(id).get();
+        return reviewById.update(reviewModifyRequest);
+    }
+
+    public void delete(Long id, ReviewDeleteRequest request) throws Exception {
+        Review review = reviewRepository.findById(id).get();
+        Board board = boardRepository.findBoardById(request.getBoardId());
+        Member member = memberRepository.findMemberByToken(request.getToken());
+
+        if(!review.getBoard().equals(board) || !review.getMember().equals(member)) {
+            throw new Exception();
+        }
+
         reviewRepository.delete(review);
+
     }
 
-    public void deleteBoard(Board board) {
-        reviewRepository.deleteAllByBoard(board);
-    }
 
 }

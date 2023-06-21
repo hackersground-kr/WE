@@ -3,6 +3,8 @@ package HackerGround.WEIN.domain.comment;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.picture.ReviewPicture;
 import HackerGround.WEIN.domain.member.Member;
+import HackerGround.WEIN.dto.board.BoardModifyRequest;
+import HackerGround.WEIN.dto.review.ReviewModifyRequest;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Builder;
@@ -50,10 +52,11 @@ public class Review {
         this.createdTime = createdTime;
     }
 
-    public Review update(Review review) {
-        this.title = review.getTitle();
-        this.description = review.getDescription();
-        this.createdTime = review.getCreatedTime();
+    public Review update(ReviewModifyRequest reviewModifyRequest) {
+        this.title = reviewModifyRequest.getTitle();
+        this.description = reviewModifyRequest.getDescription();
+        this.createdTime = reviewModifyRequest.getCreatedTime();
         return this;
     }
+
 }
