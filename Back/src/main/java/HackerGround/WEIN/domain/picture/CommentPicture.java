@@ -1,6 +1,6 @@
 package HackerGround.WEIN.domain.picture;
 
-import HackerGround.WEIN.domain.comment.Comment;
+import HackerGround.WEIN.domain.comment.Review;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,7 +19,7 @@ public class CommentPicture {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Comment comment;
+    private Review review;
 
     private String fileName;
     private String filePath;

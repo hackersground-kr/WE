@@ -16,7 +16,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Comment {
+public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Comment {
     private Board board;
 
     @Nullable
-    @OneToMany(mappedBy = "comment")
+    @OneToMany(mappedBy = "review")
     private List<CommentPicture> commentPictureList=new ArrayList<>();
 
     private Long userId;
