@@ -13,7 +13,12 @@ public class MemberRequest {
     private boolean gender;
 
     public Member to_Entity() {
-        return new Member(this.userName,this.loginId,this.password,this.birth);
+        return Member.builder()
+                .userName(userName)
+                .loginId(loginId)
+                .passWord(password)
+                .birth(birth)
+                .build();
 
     }
 }
