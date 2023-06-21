@@ -45,18 +45,206 @@
 } */
 
 .Recommend-Contents {
-    flex-direction: column;
-    box-sizing: border-box;
-    position: relative;
-    max-width: 1312px;
-    width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
-    align-items: stretch;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 1312px;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 100px;
+  padding-right: 100px;
+  align-items: stretch;
 }
 
-.Recommend-Title{
-    display: flex;
-    font-size: 1.4rem;
-    font-weight: 800;
+.Recommend-Title {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.Recommend-Section {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  position: relative;
+  width: 90vw;
+  align-items: stretch;
+}
+
+.list-Style {
+    width: 80vw;
+  list-style: none;
+  display: flex;
+  overflow: auto;
+}
+
+.ClickContents1 {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.ClickContents1 img {
+  width: 300px;
+}
+
+.ClickContents1 p {
+  font-size: 0.7rem;
+}
+
+.ClickContents2 {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.ClickContents2 p {
+  font-size: 0.7rem;
+}
+
+.ClickContents2 img {
+  width: 300px;
+}
+
+.ClickContents3 {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.ClickContents3 p {
+  font-size: 0.7rem;
+}
+
+.ClickContents3 img {
+  width: 300px;
+}
+
+.ClickContents4 img {
+  width: 300px;
+}
+.ClickContents4 p {
+  font-size: 0.7rem;
+}
+
+.Popular-Contents {
+  justify-content: center;
+  text-align: center;
+}
+
+.popularTitle {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+
+.SectionBox {
+    position: relative;
+    margin: auto;
+  width: 60%;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 280px;
+  grid-column-gap: 0px;
+}
+
+.SectionContents1{
+    margin: auto;
+  cursor: pointer;
+  height: 10vh;
+}
+
+.SectionContents1 img{
+    width: 300px;
+}
+
+.SectionContents2{
+    margin: auto;
+  cursor: pointer;
+  height: 10vh;
+}
+
+.SectionContents2 img{
+    width: 300px;
+}
+
+.SectionContents3{
+    margin: auto;
+  cursor: pointer;
+  height: 10vh;
+}
+
+.SectionContents3 img{
+    width: 300px;
+}
+
+.SectionContents4{
+    margin: auto;
+  cursor: pointer;
+  height: 10vh;
+}
+
+.SectionContents4 img{
+    width: 300px;
+}
+
+.FAQ {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.FAQ h2 {
+  font-size: 2.4rem;
+}
+
+.FAQ-question {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* box-sizing: border-box; */
+  position: relative;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.FAQ-question1 {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.span {
+  width: 500px;
+}
+.Down {
+  width: 30px;
+  height: 30px;
+}
+
+.FAQ-question2 {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.FAQ-question3 {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem;
 }
