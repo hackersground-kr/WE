@@ -2,7 +2,7 @@ package HackerGround.WEIN.domain.comment;
 
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.picture.ReviewPicture;
-import HackerGround.WEIN.domain.user.Member;
+import HackerGround.WEIN.domain.member.Member;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Getter;

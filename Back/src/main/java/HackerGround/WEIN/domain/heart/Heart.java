@@ -1,7 +1,7 @@
-package HackerGround.WEIN.domain.like;
+package HackerGround.WEIN.domain.heart;
 
 import HackerGround.WEIN.domain.board.Board;
-import HackerGround.WEIN.domain.user.Member;
+import HackerGround.WEIN.domain.member.Member;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;

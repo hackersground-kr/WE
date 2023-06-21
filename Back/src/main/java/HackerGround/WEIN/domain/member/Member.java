@@ -1,16 +1,12 @@
-package HackerGround.WEIN.domain.user;
+package HackerGround.WEIN.domain.member;
 
 
-import HackerGround.WEIN.domain.board.Board;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter
@@ -28,7 +24,6 @@ public class Member {
     private String passWord;
     private Long birth;
 
-    @Nullable
     private boolean gender;
 
     @Builder

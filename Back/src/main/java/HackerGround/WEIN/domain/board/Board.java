@@ -2,7 +2,7 @@ package HackerGround.WEIN.domain.board;
 
 import HackerGround.WEIN.domain.comment.Review;
 import HackerGround.WEIN.domain.picture.BoardPicture;
-import HackerGround.WEIN.domain.user.Member;
+import HackerGround.WEIN.domain.member.Member;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
