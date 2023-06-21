@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97fde46e-d534-43d3-9326-0ed9edf2fc11" name="Changes" comment="[Update] 개발환경 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/BoardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="97fde46e-d534-43d3-9326-0ed9edf2fc11" name="Changes" comment="[ADD] Response : Response 생성">
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/CommonResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/ListResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/ListResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/SingleResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/SingleResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,21 @@
       <option name="project" value="LOCAL" />
       <updated>1687342841455</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[ADD] BoardRepository : BoardRepository 생성">
+      <created>1687344323363</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687344323363</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[ADD] Response : Response 생성">
+      <created>1687344559126</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687344559126</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +170,8 @@
     <MESSAGE value="[UPDATE] 각 Entity 연관관계 수정" />
     <MESSAGE value="[Update] 개발환경재설정" />
     <MESSAGE value="[Update] 개발환경 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Update] 개발환경 완료" />
+    <MESSAGE value="[ADD] BoardRepository : BoardRepository 생성" />
+    <MESSAGE value="[ADD] Response : Response 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Response : Response 생성" />
   </component>
 </project>

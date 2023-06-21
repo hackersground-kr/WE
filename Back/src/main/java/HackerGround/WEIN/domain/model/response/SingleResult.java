@@ -1,4 +1,8 @@
 package HackerGround.WEIN.domain.model.response;
 
-public class SingleResult {
+import lombok.Getter;
+
+@Getter
+public class SingleResult<T> extends CommonResult {
+    private T data;
 }
