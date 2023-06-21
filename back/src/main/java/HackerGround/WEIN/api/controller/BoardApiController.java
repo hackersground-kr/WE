@@ -93,7 +93,7 @@ public class BoardApiController {
             return responseService.getFailResult();
         }
 
-        board.modify(request);
+        boardService.modify(id,request);
         return responseService.getSuccessResult();
     }
 

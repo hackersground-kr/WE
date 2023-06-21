@@ -8,6 +8,7 @@ import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.repository.BoardRepository;
 import HackerGround.WEIN.repository.MemberRepository;
 import HackerGround.WEIN.repository.ReviewRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +31,7 @@ public class BoardService {
         return boardRepository.save(board);
     }
 
+    @Transactional
     public Board modify(Long id, BoardModifyRequest boardModifyRequest) {
         Board boardById = boardRepository.findBoardById(id);
         return boardById.modify(boardModifyRequest);

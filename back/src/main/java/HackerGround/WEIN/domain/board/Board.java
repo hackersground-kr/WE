@@ -6,6 +6,7 @@ import HackerGround.WEIN.domain.picture.BoardPicture;
 import HackerGround.WEIN.domain.member.Member;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+import jakarta.transaction.Transactional;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -54,6 +55,7 @@ public class Board {
         this.heartCount = Long.valueOf(0);
     }
 
+    @Transactional
     public Board modify(BoardModifyRequest boardModifyRequest) {
         this.boardTitle=boardModifyRequest.getBoardTitle();
         this.description=boardModifyRequest.getDescription();
