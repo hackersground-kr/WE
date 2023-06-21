@@ -60,6 +60,9 @@ public class Board {
     public void updateHeartCount() {
         this.heartCount+=1;
     }
+    public void subHeartCount() {
+        this.heartCount-=1;
+    }
 
     public void updateViewCount() {
         this.viewCount+=1;

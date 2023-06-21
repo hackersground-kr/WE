@@ -22,16 +22,20 @@ public class HeartService {
         Board board = boardRepository.findBoardById(id);
         Member member = memberRepository.findMemberByToken(request.getToken());
 
-        if(heartRepository.findByMemberAndBoard(member,board)) {
-            throw new Exception();
+
+
+        if(!heartRepository.findByMemberAndBoard(member,board)) {
+            Heart heart=Heart.builder()
+                    .member(member)
+                    .board(board)
+                    .build();
+
+            heartRepository.save(heart);
+            board.updateHeartCount();
         }
-
-        Heart heart=Heart.builder()
-                .member(member)
-                .board(board)
-                .build();
-
-        heartRepository.save(heart);
-        board.updateHeartCount();
+        else {
+            heartRepository.deleteByMember(member);
+            board.subHeartCount();
+        }
     }
 }

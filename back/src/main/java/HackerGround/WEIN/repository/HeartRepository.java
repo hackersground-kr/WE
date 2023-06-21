@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 public interface HeartRepository extends JpaRepository<Heart,Long> {
 
     boolean findByMemberAndBoard(Member member, Board board);
+    void deleteByMember(Member member);
 }
