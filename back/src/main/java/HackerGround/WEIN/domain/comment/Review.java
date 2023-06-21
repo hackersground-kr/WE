@@ -42,7 +42,9 @@ public class Review {
     private LocalDateTime createdTime;
 
     @Builder
-    public Review(String title, String description, LocalDateTime createdTime) {
+    public Review(Board board,Member member,String title, String description, LocalDateTime createdTime) {
+        this.board=board;
+        this.member=member;
         this.title = title;
         this.description = description;
         this.createdTime = createdTime;

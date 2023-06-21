@@ -3,6 +3,7 @@ package HackerGround.WEIN.service;
 import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.domain.comment.Review;
 import HackerGround.WEIN.domain.member.Member;
+import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.dto.review.ReviewRequest;
 import HackerGround.WEIN.repository.BoardRepository;
 import HackerGround.WEIN.repository.MemberRepository;
@@ -31,14 +32,20 @@ public class ReviewService {
         return reviewRepository.findAll();
     }
 
-    public Review save(ReviewRequest review, Long boardId, Long memberId) {
-        Board board = boardRepository.findById(boardId).get();
-        Member member = memberRepository.findById(memberId).get();
-        review.setBoard(board);
-        review.setMember(member);
-        reviewRepository.save(review);
-        return review;
+    public Review save(ReviewRequest review) {
+        Board board = boardRepository.findBoardById(review.getBoardId());
+        Member member = memberRepository.findMemberByToken(review.getMemberToken());
+
+        Review reviewEntity = review.to_Entity(member,board);
+        reviewRepository.save(reviewEntity);
+        return reviewEntity;
     }
+
+//    public Member save(MemberRequest memberRequest) {
+//        Member member = memberRequest.to_Entity();
+//        memberRepository.save(member);
+//        return member;
+//    }
 
     public Review update(Long reviewId, Review newReview) throws Exception {
         Review review = findById(reviewId).get();
@@ -48,4 +55,5 @@ public class ReviewService {
     public void delete(Review review) {
         reviewRepository.delete(review);
     }
+
 }

@@ -1,7 +1,11 @@
 package HackerGround.WEIN.api.controller;
 
+import HackerGround.WEIN.domain.board.Board;
+import HackerGround.WEIN.domain.member.Member;
 import HackerGround.WEIN.dto.review.ReviewRequest;
 import HackerGround.WEIN.model.response.CommonResult;
+import HackerGround.WEIN.service.BoardService;
+import HackerGround.WEIN.service.MemberService;
 import HackerGround.WEIN.service.ResponseService;
 import HackerGround.WEIN.service.ReviewService;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class ReviewApiController {
 
+    private final BoardService boardService;
+    private final MemberService memberService;
     private final ReviewService reviewService;
     private final ResponseService responseService;
 

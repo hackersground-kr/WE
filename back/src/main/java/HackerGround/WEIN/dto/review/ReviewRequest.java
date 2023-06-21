@@ -13,12 +13,18 @@ import java.time.LocalDateTime;
 @Setter
 @Getter
 public class ReviewRequest {
+
+    private Long boardId;
+    private String memberToken;
+
     private String title;
     private String description;
     private LocalDateTime createdTime;
 
-    public Review to_Entity() {
+    public Review to_Entity(Member member,Board board) {
         return Review.builder()
+                .board(board)
+                .member(member)
                 .title(title)
                 .description(description)
                 .createdTime(LocalDateTime.now())
