@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97fde46e-d534-43d3-9326-0ed9edf2fc11" name="Changes" comment="[ADD] Response : Response 생성">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/dto/ResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/dto/member/MemberResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/dto/member/MemberUpdateResponse.java" afterDir="false" />
+    <list default="true" id="97fde46e-d534-43d3-9326-0ed9edf2fc11" name="Changes" comment="[Add] BoardService : 게시판 등록 기능 구현">
+      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/dto/heart/HeartRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/HeartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/HeartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/WEIN.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/WEIN.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/WEIN.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/WEIN.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/WEIN.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/comment/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/comment/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/like/Heart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/heart/Heart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/CommonResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/ListResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/ListResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/SingleResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/model/response/SingleResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/user/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/member/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/BoardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/BoardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/MemberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +181,7 @@
     <MESSAGE value="[Update] 개발환경 완료" />
     <MESSAGE value="[ADD] BoardRepository : BoardRepository 생성" />
     <MESSAGE value="[ADD] Response : Response 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Response : Response 생성" />
+    <MESSAGE value="[Add] BoardService : 게시판 등록 기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Add] BoardService : 게시판 등록 기능 구현" />
   </component>
 </project>

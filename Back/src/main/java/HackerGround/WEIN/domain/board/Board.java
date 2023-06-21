@@ -57,5 +57,8 @@ public class Board {
         return this;
     }
 
+    public void updateHeartCount() {
+        this.heartCount+=1;
+    }
 
 }
