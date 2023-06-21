@@ -7,6 +7,7 @@ import HackerGround.WEIN.dto.member.MemberModifyRequest;
 import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.dto.member.MemberResponse;
 import HackerGround.WEIN.model.response.CommonResult;
+import HackerGround.WEIN.model.response.ListResult;
 import HackerGround.WEIN.model.response.SingleResult;
 import HackerGround.WEIN.service.MemberService;
 import HackerGround.WEIN.service.ResponseService;
@@ -15,7 +16,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @RestController
@@ -39,6 +42,17 @@ public class UserApiController {
     /**
      *
      * 유저 전체 검색
+     */
+    @GetMapping("/member")
+    public ListResult<MemberResponse> findAllUsers() {
+        List<Member> members = memberService.findAll();
+        List<MemberResponse> memberResponseList=members.stream().map(MemberResponse::toDto).collect(Collectors.toList());
+        return responseService.getListResult(memberResponseList);
+    }
+
+    /**
+     *
+     * 유저 등록
      */
     @PostMapping("/member")
     public CommonResult save(@Validated @RequestBody MemberRequest request, BindingResult bindingResult) {
