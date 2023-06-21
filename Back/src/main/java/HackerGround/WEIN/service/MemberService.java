@@ -19,6 +19,10 @@ public class MemberService {
         return memberRepository.findById(id);
     }
 
+    public Member findByToken(String token) {
+        return memberRepository.findMemberByToken(token);
+    }
+
     public List<Member> findAll() {
         return memberRepository.findAll();
     }
