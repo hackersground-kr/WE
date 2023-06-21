@@ -20,9 +20,11 @@ public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "COMMENT_ID")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "BOARD_ID")
     private Board board;
 
     @Nullable

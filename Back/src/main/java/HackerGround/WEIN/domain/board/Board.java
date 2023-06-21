@@ -22,9 +22,11 @@ public class Board {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="BOARD_ID")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID")
     private User user;
 
     @OneToMany(mappedBy = "board")
@@ -37,7 +39,6 @@ public class Board {
     private List<Like> likes=new ArrayList<>();
 
 
-    private String yodayeong;
     private String boardTitle;
     private String description;
     private LocalDateTime createTime;

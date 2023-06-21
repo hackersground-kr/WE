@@ -20,6 +20,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "USER_ID")
     private Long id;
 
     @OneToMany(mappedBy = "user")
@@ -30,7 +31,7 @@ public class User {
 
 
     private String userName;
-    private String userId;
+    private String loginId;
     private String passWord;
     private Long birth;
 

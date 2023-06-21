@@ -15,17 +15,17 @@ public class Like {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "LIKE_ID")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="USER_ID")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="BOARD_ID")
     private Board board;
 
-//    foreign key
-    private Long boardId;
-    private Long userId;
 
     private Long count;
 }

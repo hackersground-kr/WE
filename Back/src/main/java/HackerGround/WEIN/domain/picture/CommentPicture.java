@@ -16,9 +16,11 @@ public class CommentPicture {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "COMMENTPIC_ID")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "COMMENT_ID")
     private Comment comment;
 
     private String fileName;
