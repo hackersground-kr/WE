@@ -1,0 +1,51 @@
+/* Slider */
+.slick-slider /*�꾩껜 �⑹뼱由�*/
+{
+    position: absolute;
+    background: #DFE5EC;
+    top: 6rem;
+    width: 100%;
+    height: 45vh;
+    overflow: hidden;
+    left: 0;
+}
+
+.slick-list
+{
+    position: absolute;
+    left: 8%;
+    width: 85vw;
+    background: #DFE5EC;
+}
+
+.slick-slide
+{
+    float: left;
+  
+    height: 45vh;
+    width: 100vw;
+    min-height: 1px;
+    overflow: hidden;
+}
+.slick-slide img   /*蹂댁뿬吏��� �대�吏� �ъ씠利� 議곗젙*/
+{
+    display: block;
+    width: 83vw;
+    height: 45vh;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
