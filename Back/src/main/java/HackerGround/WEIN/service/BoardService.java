@@ -48,4 +48,8 @@ public class BoardService {
         return boardRepository.findAll();
     }
 
+    public void DeleteByMember(Member member) {
+        boardRepository.deleteAllByMember(member);
+    }
+
 }

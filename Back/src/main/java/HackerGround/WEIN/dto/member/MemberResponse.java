@@ -3,6 +3,8 @@ package HackerGround.WEIN.dto.member;
 import HackerGround.WEIN.domain.member.Member;
 import lombok.Data;
 
+import java.util.Optional;
+
 @Data
 public class MemberResponse {
 
@@ -19,7 +21,7 @@ public class MemberResponse {
         this.birth = member.getBirth();
     }
 
-    public static MemberResponse toDto(Member member) {
+    public static MemberResponse toDto(Optional<Member> member) {
         return new MemberResponse(member);
     }
 }

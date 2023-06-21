@@ -3,7 +3,9 @@ package HackerGround.WEIN.service;
 import HackerGround.WEIN.dto.member.MemberModifyResponse;
 import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.domain.member.Member;
+import HackerGround.WEIN.repository.BoardRepository;
 import HackerGround.WEIN.repository.MemberRepository;
+import HackerGround.WEIN.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,14 +16,13 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MemberService {
     private final MemberRepository memberRepository;
+    private final BoardRepository boardRepository;
+    private final ReviewRepository reviewRepository;
 
-    public Optional<Member> findById(Long id) {
-        return memberRepository.findById(id);
-    }
-
-    public Member findByToken(String token) {
+    public Optional<Member> findByToken(String token) {
         return memberRepository.findMemberByToken(token);
     }
+
 
     public List<Member> findAll() {
         return memberRepository.findAll();
@@ -33,18 +34,14 @@ public class MemberService {
         return member;
     }
 
-    public void save_Temp() {
-        Member member=new Member("1","2","3",123L);
-        memberRepository.save(member);
-    }
-
-    public Member update(Long id, MemberModifyResponse memberUpdateResponse) {
-        Member member = findById(id).get();
-        return member.update(memberUpdateResponse);
-    }
+//    public Member update(Long id, MemberModifyResponse memberUpdateResponse) {
+////        Member member = findById(id).get();
+//        return member.update(memberUpdateResponse);
+//    }
 
 
-    public void delete(Member member) {
+    public void delete(Optional<Member> member) {
+        boardRepository.deleteAllByMember(member);
         memberRepository.delete(member);
     }
 

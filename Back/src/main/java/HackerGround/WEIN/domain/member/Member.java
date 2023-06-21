@@ -1,6 +1,7 @@
 package HackerGround.WEIN.domain.member;
 
 
+import HackerGround.WEIN.domain.board.Board;
 import HackerGround.WEIN.dto.member.MemberModifyResponse;
 import jakarta.persistence.*;
 import lombok.Builder;
@@ -27,6 +28,7 @@ public class Member {
     private String passWord;
     private Long birth;
     private boolean gender;
+
 
     @Builder
     public Member(String userName, String loginId, String passWord, Long birth) {

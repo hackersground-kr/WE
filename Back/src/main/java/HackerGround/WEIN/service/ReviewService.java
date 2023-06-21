@@ -22,8 +22,8 @@ public class ReviewService {
 
     //생성, 수정, 삭제, 아이디로 찾고, 전체 찾기 , 연관관계 매핑
 
-    public Optional<Review> findById(Long id) {
-        return reviewRepository.findById(id);
+    public Optional<Review> findById(Long id) throws Exception {
+        return Optional.ofNullable(reviewRepository.findById(id).orElseThrow(() -> new Exception()));
     }
 
     public List<Review> findAll() {
@@ -39,7 +39,7 @@ public class ReviewService {
         return review;
     }
 
-    public Review update(Long reviewId, Review newReview) {
+    public Review update(Long reviewId, Review newReview) throws Exception {
         Review review = findById(reviewId).get();
         return review.update(newReview);
     }
