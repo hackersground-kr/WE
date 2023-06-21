@@ -1,0 +1,62 @@
+.Ad {
+  width: 100%;
+  height: 60vh;
+}
+
+.Main-title {
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+}
+
+.search {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  height: 92px;
+}
+
+.searchWord {
+  width: 50vw;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+/* .enter {
+    margin-left: 1px;
+  width: 70px;
+  height: 70px;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.ReadingGlass {
+    margin: auto;
+    display: block;
+    width: 50px;
+    height: 50px;
+} */
+
+.Recommend-Contents {
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 1312px;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: stretch;
+}
+
+.Recommend-Title{
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
