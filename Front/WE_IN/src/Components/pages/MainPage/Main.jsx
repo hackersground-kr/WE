@@ -12,7 +12,8 @@ import book from "../../../assets/book.jpg";
 // import ReadingGlass from "../../../assets/search.png";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 const Main = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -108,66 +109,44 @@ const Main = () => {
       <br />
       <br />
       <br />
-      <div className="Popular-Contents">
+      <Container className="Popular-Contents">
         <h1 className="popularTitle">
           지금 가장 많이 듣는
           <br />
           베스트 클래스 TOP4
         </h1>
-        <div className="SectionBox">
-          <div className="SectionContents1">
+        <Box className="SectionBox">
+          <Box className="SectionContents1">
             <img src={food} alt="food" />
             <h4>
               전직 미슐랭 요리사와 함께 하는 <br /> 이탈리아 가정식 클래스
             </h4>
             <p>요리·음료 | 요리왕효성</p>
-          </div>
-          <div className="SectionContents2">
+          </Box>
+          <Box className="SectionContents2">
             <img src={draw} alt="draw" />
             <h4>장휘영의 그림 잘 그리는 법</h4>
             <p>드로잉 | 장휘영</p>
-          </div>
-          <div className="SectionContents3">
+          </Box>
+          <Box className="SectionContents3">
             <img src={book} alt="book" />
             <h4>오래 남는 독서, 채교수의 독쓰</h4>
             <p>라이프스타일 | 채교수</p>
-          </div>
-          <div className="SectionContents4">
+          </Box>
+          <Box className="SectionContents4">
             <img src={Meow} alt="cat" />
             <h4>고양이와 함께하는 반려동물 원데이클래스</h4>
             <p>반려동물·고양이 | 김규회수의사</p>
-          </div>
-        </div>
-      </div>
+          </Box>
+        </Box>
+      </Container>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div className="FAQ">
+      <Container sx={{ height: 300 }}></Container>
+
+      <Container className="FAQ" sx={{ mb: 7 }}>
         <h2> 자주 묻는 질문 </h2>
         <Accordion />
-      </div>
+      </Container>
       <Menu />
     </div>
   );
