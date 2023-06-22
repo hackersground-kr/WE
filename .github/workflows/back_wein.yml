@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - WEIN
+name: Build and deploy JAR app to Azure Web App - wein
 
 on:
   push:
@@ -47,6 +47,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'WEIN'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7FB7AEED20054F3AAC8817D0F4D5362C }}
+          app-name: 'wein'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7D19D2286C9424C85161C9008E6805D }}
           package: '*.jar'
