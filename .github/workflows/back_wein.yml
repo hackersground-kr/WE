@@ -48,6 +48,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'WEIN'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7FB7AEED20054F3AAC8817D0F4D5362C }}
           package: '*.jar'
