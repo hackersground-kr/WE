@@ -9,11 +9,14 @@ import java.time.LocalDateTime;
 public class ReviewResponse {
 
     private String title;
+
+    private String userName;
     private String description;
     private LocalDateTime createdTime;
 
     public ReviewResponse(Review review) {
         this.title = review.getTitle();
+        this.userName=review.getMember().getUserName();
         this.description = review.getDescription();
         this.createdTime = review.getCreatedTime();
     }

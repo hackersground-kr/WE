@@ -42,8 +42,8 @@ public class Board {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd",timezone = "Asia/Seoul")
     private LocalDateTime createTime;
-    private Long viewCount;
-    private Long heartCount;
+    private Integer viewCount;
+    private Integer heartCount;
 
     @Builder
     public Board(Member member,String boardTitle, String description) {
@@ -51,8 +51,8 @@ public class Board {
         this.boardTitle = boardTitle;
         this.description = description;
         this.createTime = LocalDateTime.now();
-        this.viewCount = Long.valueOf(0);
-        this.heartCount = Long.valueOf(0);
+        this.viewCount=0;
+        this.heartCount=0;
     }
 
     @Transactional

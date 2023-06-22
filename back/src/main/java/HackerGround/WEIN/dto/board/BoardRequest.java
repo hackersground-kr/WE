@@ -17,7 +17,11 @@ public class BoardRequest {
     private String description;
 
     public Board to_Entity(Member member) {
-        return new Board(member,this.boardTitle,this.description);
+        return Board.builder()
+                .member(member)
+                .boardTitle(boardTitle)
+                .description(description)
+                .build();
     }
 
 

@@ -49,13 +49,20 @@ public class BoardService {
         boardRepository.delete(board);
     }
 
+    @Transactional
     public void add_HeartCount(Long id) {
         Board boardById = boardRepository.findBoardById(id);
         boardById.updateHeartCount();
     }
 
-    public Board findById(Long id) throws Exception {
-        return boardRepository.findById(id).orElseThrow(() -> new Exception("Could not found"));
+    @Transactional
+    public void addViewCount(Board board) {
+        board.updateViewCount();
+    }
+
+
+    public Board findById(Long id) {
+        return boardRepository.findBoardById(id);
     }
 
     public List<Board> findAll() {

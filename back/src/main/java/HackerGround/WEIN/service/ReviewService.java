@@ -34,9 +34,13 @@ public class ReviewService {
         return reviewRepository.findAll();
     }
 
+    public List<Review> findByBoardId(Long id) {
+        return reviewRepository.findReviewsByBoardId(id);
+    }
+
     public Review save(ReviewRequest review) {
+        Member member = memberRepository.findMemberByToken(review.getToken());
         Board board = boardRepository.findBoardById(review.getBoardId());
-        Member member = memberRepository.findMemberByToken(review.getMemberToken());
 
         Review reviewEntity = review.to_Entity(member,board);
         reviewRepository.save(reviewEntity);
@@ -66,8 +70,8 @@ public class ReviewService {
         }
 
         reviewRepository.delete(review);
-
     }
+
 
 
 }

@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="570a7248-2c4b-425f-99d2-823f1397cf55" name="Changes" comment="[Add] BoardApiController : Member 전체 조회 기능 구현" />
+    <list default="true" id="570a7248-2c4b-425f-99d2-823f1397cf55" name="Changes" comment="[Add] BoardApiController : Member 전체 조회 기능 구현">
+      <change afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/board/BoardReviewResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/api/controller/BoardApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/api/controller/BoardApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/api/controller/ReviewApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/api/controller/ReviewApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/board/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/domain/board/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/board/BoardRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/board/BoardRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/board/BoardResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/board/BoardResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/review/ReviewRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/review/ReviewRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/review/ReviewResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/dto/review/ReviewResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/repository/ReviewRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/repository/ReviewRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/service/BoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/service/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/HackerGround/WEIN/service/ReviewService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/controller/BoardApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/controller/BoardApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/controller/ReviewApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/api/controller/ReviewApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/domain/board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/board/BoardRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/board/BoardRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/board/BoardResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/board/BoardResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/review/ReviewRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/review/ReviewRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/review/ReviewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/dto/review/ReviewResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/repository/ReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HackerGround/WEIN/service/ReviewService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687364773012</updated>
       <workItem from="1687364779276" duration="1527000" />
-      <workItem from="1687383785409" duration="5415000" />
+      <workItem from="1687383785409" duration="10390000" />
     </task>
     <task id="LOCAL-00001" summary="[Update] ReviewApiController : 오타 수정">
       <created>1687374515496</created>

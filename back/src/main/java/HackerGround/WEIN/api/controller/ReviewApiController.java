@@ -49,7 +49,7 @@ public class ReviewApiController {
     }
 
     //리뷰 등록
-    @GetMapping("/review/create")
+    @PostMapping("/review/create")
     public CommonResult save(@Validated @RequestBody ReviewRequest request, BindingResult bindingResult) {
         if(bindingResult.hasErrors()) {
             return responseService.getFailResult();

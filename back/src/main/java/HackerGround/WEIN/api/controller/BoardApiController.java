@@ -1,21 +1,17 @@
 package HackerGround.WEIN.api.controller;
 
 import HackerGround.WEIN.domain.board.Board;
+import HackerGround.WEIN.domain.comment.Review;
 import HackerGround.WEIN.domain.member.Member;
-import HackerGround.WEIN.dto.board.BoardDeleteRequest;
-import HackerGround.WEIN.dto.board.BoardModifyRequest;
-import HackerGround.WEIN.dto.board.BoardRequest;
-import HackerGround.WEIN.dto.board.BoardResponse;
+import HackerGround.WEIN.dto.board.*;
 import HackerGround.WEIN.dto.heart.HeartRequest;
 import HackerGround.WEIN.dto.member.MemberRequest;
 import HackerGround.WEIN.dto.member.MemberResponse;
+import HackerGround.WEIN.dto.review.ReviewResponse;
 import HackerGround.WEIN.model.response.CommonResult;
 import HackerGround.WEIN.model.response.ListResult;
 import HackerGround.WEIN.model.response.SingleResult;
-import HackerGround.WEIN.service.BoardService;
-import HackerGround.WEIN.service.HeartService;
-import HackerGround.WEIN.service.MemberService;
-import HackerGround.WEIN.service.ResponseService;
+import HackerGround.WEIN.service.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -31,6 +27,8 @@ public class BoardApiController {
 
     private final MemberService memberService;
     private final BoardService boardService;
+
+    private final ReviewService reviewService;
     private final ResponseService responseService;
 
     private final HeartService heartService;
@@ -40,11 +38,14 @@ public class BoardApiController {
      * 단건 조회
      */
     @GetMapping("/board/{id}")
-    public SingleResult<BoardResponse> getOneBoard(@PathVariable Long id) throws Exception {
+    public SingleResult<BoardReviewResponse> getOneBoard(@PathVariable Long id) throws Exception {
         Board board = boardService.findById(id);
-        board.updateViewCount();
-        BoardResponse boardResponse = BoardResponse.toDto(board);
-        return responseService.getSingleResult(boardResponse);
+        boardService.addViewCount(board);
+
+        List<Review> reviewList = reviewService.findByBoardId(id);
+        List<ReviewResponse> responseList = reviewList.stream().map(ReviewResponse::toDto).collect(Collectors.toList());
+
+        return responseService.getSingleResult(new BoardReviewResponse(board,responseList));
     }
 
     /**

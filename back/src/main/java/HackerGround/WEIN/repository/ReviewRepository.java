@@ -12,4 +12,6 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
     void deleteAllByBoard(Board board);
     List<Review> findReviewsByMemberAndBoard(Member member, Board board);
 
+    List<Review> findReviewsByBoardId(Long id);
+
 }
