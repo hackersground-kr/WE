@@ -68,8 +68,8 @@
 ![image](https://github.com/hackersground-kr/WE/assets/87405971/edaa7c26-8dba-4846-8a5c-b10fda3af1ea)
 
 <br>
-### [Backend]
-
+### [BackEnd]
+<br>
 **애저 SQL**
 <br>
 1. 애저 포탈에 접속한다. https://portal.azure.com/#home
