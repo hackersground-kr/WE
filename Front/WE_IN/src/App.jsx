@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router";
 import Main from "./Components/pages/MainPage/Main";
 import Map from "./Components/pages/DetailPage/Location/Map";
 import Register from "./Components/pages/DetailPage/Register/Register";
+import Login from "./Components/pages/DetailPage/Login/Login";
 
 import "./App.css";
 import { createTheme, ThemeProvider } from "@mui/material";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/map" element={<Map />} />
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<Login />}></Route>
       </Routes>
     </ThemeProvider>
   );
