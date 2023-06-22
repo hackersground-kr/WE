@@ -38,7 +38,7 @@
    - 인스턴스 정보 <br>
       이름 : "임의 작성" <br>
        게시 : 정적 웹 앱 <br>
-   - Azure Functions 및 준비 세부 정보 : East Asia
+   - Azure Functions 및 준비 세부 정보 : East Asia를 제외한 모든 나라 중에 하나를 선택하면 된다.(EX) CentralUS)
    - 배포 세부 정보 : GitHub <br>
      조직 : 본인 깃헙 아이디 <br>
      리포지토리 : 포크해온 리포지 토리 (=WE)<br>
@@ -68,8 +68,8 @@
 
 > **여러분의 제품/서비스를 Microsoft 애저 클라우드에 배포하기 위해 사전에 필요한 준비 사항들을 적어주세요.**
 
-dist파일안의 index.html의 경로를 수정한다.<br>
-kakao map api script를 제외한 나머지 모든 경로의 최상단에 . 을 추가한다.
+
+
 
 배포 주소 첨부사진
 
