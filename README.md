@@ -111,21 +111,30 @@
 서버배포
 <br>
 1. 팀 리소스 그룹에 접속한다.
-2. 왼쪽 상단의 만들기를 클릭한다.
-3. 웹 앱을 선택한다.
-5. 만들기를 누른다.
+   <img width="1440" alt="스크린샷 2023-06-23 오전 6 57 33" src="https://github.com/hackersground-kr/WE/assets/87405998/d5bc8936-920b-4471-9fec-8c0bc48e6e25">
 
-7. 리소스 그룹을 선택하고, 이름 작성하고 런타임 스택은 각자가 개발하는 것에 맞게 하고 검토 + 만들기 한다.
+2. 왼쪽 상단의 만들기를 클릭한다.
+   <img width="1440" alt="스크린샷 2023-06-23 오전 6 58 20" src="https://github.com/hackersground-kr/WE/assets/87405998/a81a476f-2842-4917-bee9-444999784504">
+
+3. 웹 앱을 선택한다.
+   <img width="1440" alt="스크린샷 2023-06-23 오전 7 00 52" src="https://github.com/hackersground-kr/WE/assets/87405998/1b346ce5-3f5a-467b-bca7-f9262e110ff8">
+
+5. 만들기를 누른다.
+   <img width="1440" alt="스크린샷 2023-06-23 오전 7 01 22" src="https://github.com/hackersground-kr/WE/assets/87405998/5deca853-f4c9-4128-a1f5-ca62c6c163b6">
+
+
+6. 리소스 그룹을 선택하고, 이름 작성하고 런타임 스택은 각자가 개발하는 것에 맞게 하고 검토 + 만들기 한다.
    <img width="1440" alt="스크린샷 2023-06-22 오후 10 21 08" src="https://github.com/hackersground-kr/WE/assets/87405998/bd0a6aac-8ceb-4fff-8b76-b0162d8c0748">
 
-9. 만들어진 서버의 왼쪽의 배포 > 배포 센터에 접속한다.
+7. 만들어진 서버의 왼쪽의 배포 > 배포 센터에 접속한다.
     <img width="1440" alt="스크린샷 2023-06-22 오후 10 21 37" src="https://github.com/hackersground-kr/WE/assets/87405998/eb68e373-a235-4393-b063-d557c607e42f">
 
-11. 상단의 설정을 눌러서 현재 연결하고자 하는 깃허브 프로젝트와 연결한다.
+8. 상단의 설정을 눌러서 현재 연결하고자 하는 깃허브 프로젝트와 연결한다.
     <img width="1440" alt="스크린샷 2023-06-22 오후 10 21 52" src="https://github.com/hackersground-kr/WE/assets/87405998/c2e622cc-4aa9-490a-a2eb-dde93071910c">
 
-13. 깃허브로 돌아가서 build와 deploy과정을 지켜본다.
-14. 완료가 되면, server주소를 가지고 접속을 해본다.
+9. 깃허브로 돌아가서 build와 deploy과정을 지켜본다.
+   <br>
+10. 완료가 되면, server주소를 가지고 접속을 해본다.
 <br>
 
 ### 배포 완성 사진
