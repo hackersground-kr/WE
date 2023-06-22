@@ -45,8 +45,13 @@ function Header() {
     setAnchorElUser(null);
   };
 
-  const handleSettingsClick = () => {
+  const MoveLoginPage = () => {
     navigate("/login");
+    handleCloseUserMenu();
+  };
+
+    const MoveAccountPage = () => {
+    navigate("/Account");
     handleCloseUserMenu();
   };
 
@@ -172,7 +177,7 @@ function Header() {
                 {settings.map((setting, index) => (
                   <MenuItem
                     key={setting}
-                    onClick={index === 1 ? handleSettingsClick : handleCloseUserMenu}
+                    onClick={index === 1 ? MoveLoginPage : MoveAccountPage}
                   >
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
