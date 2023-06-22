@@ -28,6 +28,7 @@
 0. https://github.com/hackersground-kr/WE 로 접속해서 레포지토리를 fork 해온다. <br>
 0. fork 해온 레포지토리를 터미널에서 연다.
    <br> 터미널에 다음 명령어를 순서대로 입력한다.
+> - cd Front/WE_IN  을 입력해 해당 폴더로 들어간다.
     - npm install
     - npm run build
     - dist 파일 생성 되었는지 확인 한다 -> .gitignore 파일에서 dist 관련된 파일을 모두 주석처리한다.
