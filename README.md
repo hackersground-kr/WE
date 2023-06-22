@@ -79,29 +79,33 @@
 1. 애저 포탈에 접속한다. https://portal.azure.com/#home
    <img width="1260" alt="스크린샷 2023-06-22 오후 10 09 00" src="https://github.com/hackersground-kr/WE/assets/87405998/7de332d2-bea4-4ab2-8922-4d51706a1001">
 
-3. 팀 리소스 그룹에 접속한다.
-4. 왼쪽 상단의 만들기를 클릭한다.
+2. 팀 리소스 그룹에 접속한다.
+   <img width="1440" alt="스크린샷 2023-06-23 오전 6 57 33" src="https://github.com/hackersground-kr/WE/assets/87405998/bcc5f284-ae1e-4161-a9e6-cd8c92abe936">
 
-6. SQL 데이터베이스를 선택한다.
+3. 왼쪽 상단의 만들기를 클릭한다.
+   <img width="1440" alt="스크린샷 2023-06-23 오전 6 58 20" src="https://github.com/hackersground-kr/WE/assets/87405998/267b82e1-80ea-4ccc-9033-2a1524bed579">
+
+
+4. SQL 데이터베이스를 선택한다.
    <img width="1440" alt="스크린샷 2023-06-22 오후 10 20 09" src="https://github.com/hackersground-kr/WE/assets/87405998/e0f7b4d3-0a19-444a-b8b8-7cbca900532e">
 
-7. 만들기를 누른다.
+5. 만들기를 누른다.
    <img width="1440" alt="스크린샷 2023-06-22 오후 10 12 20" src="https://github.com/hackersground-kr/WE/assets/87405998/e33866de-67ed-4551-bfc6-b82250db9745">
 
 
-9. 리소스 그룹을 정해주고, 데이터베이스 이름을 정하고, 서버를 새로 만든다. 그런 다음, 검토 + 만들기를 누르면 생성이 된다.
+6. 리소스 그룹을 정해주고, 데이터베이스 이름을 정하고, 서버를 새로 만든다. 그런 다음, 검토 + 만들기를 누르면 생성이 된다.
     <img width="1258" alt="스크린샷 2023-06-22 오후 10 18 38" src="https://github.com/hackersground-kr/WE/assets/87405998/d8f7fbff-4f6c-4a4b-9c1c-ce45f3fcb19b">
 
-11. 사진에 있는 것처럼 pom.xml에 dependency를 추가한다.
+7. 사진에 있는 것처럼 pom.xml에 dependency를 추가한다.
     <img width="581" alt="KakaoTalk_Photo_2023-06-22-22-16-52 001" src="https://github.com/hackersground-kr/WE/assets/87405998/933a5b41-88dd-4f55-9892-f5c240286553">
 
-12. SQL 데이터베이스에 왼쪽 메뉴에 설정 > 연결 문자열 > JDBC에 있는 SQL 인증을 사진에 맞게 application.properties에 작성한다.
+8. SQL 데이터베이스에 왼쪽 메뉴에 설정 > 연결 문자열 > JDBC에 있는 SQL 인증을 사진에 맞게 application.properties에 작성한다.
     <img width="933" alt="KakaoTalk_Photo_2023-06-22-23-55-53" src="https://github.com/hackersground-kr/WE/assets/87405998/ce6d8797-283e-46fd-b402-9cbad9e5ff61">
 
-13. 추가로 application.properties에 설정한 유저의 아이디와 비밀번호를 작성한다.
+9. 추가로 application.properties에 설정한 유저의 아이디와 비밀번호를 작성한다.
     <img width="1075" alt="KakaoTalk_Photo_2023-06-22-22-16-52 002" src="https://github.com/hackersground-kr/WE/assets/87405998/26a3162e-49cd-484d-86a1-56b0cf62110b">
 
-15. project를 실행한다.
+10. project를 실행한다.
 <br>
 
 서버배포
