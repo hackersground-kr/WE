@@ -96,16 +96,20 @@
 6. 리소스 그룹을 정해주고, 데이터베이스 이름을 정하고, 서버를 새로 만든다. 그런 다음, 검토 + 만들기를 누르면 생성이 된다.
     <img width="1258" alt="스크린샷 2023-06-22 오후 10 18 38" src="https://github.com/hackersground-kr/WE/assets/87405998/d8f7fbff-4f6c-4a4b-9c1c-ce45f3fcb19b">
 
-7. 사진에 있는 것처럼 pom.xml에 dependency를 추가한다.
+7. 깃허브에 테스트용 레포를 만든다. 이때 Maven으로 설정해야 한다.
+   <img width="1440" alt="스크린샷 2023-06-23 오전 7 33 12" src="https://github.com/hackersground-kr/WE/assets/87405998/3e06178e-2767-4592-9f2b-9650f882cff3">
+
+
+8. 사진에 있는 것처럼 pom.xml에 dependency를 추가한다.
     <img width="581" alt="KakaoTalk_Photo_2023-06-22-22-16-52 001" src="https://github.com/hackersground-kr/WE/assets/87405998/933a5b41-88dd-4f55-9892-f5c240286553">
 
-8. SQL 데이터베이스에 왼쪽 메뉴에 설정 > 연결 문자열 > JDBC에 있는 SQL 인증을 사진에 맞게 application.properties에 작성한다.
+9. SQL 데이터베이스에 왼쪽 메뉴에 설정 > 연결 문자열 > JDBC에 있는 SQL 인증을 사진에 맞게 application.properties에 작성한다.
     <img width="933" alt="KakaoTalk_Photo_2023-06-22-23-55-53" src="https://github.com/hackersground-kr/WE/assets/87405998/ce6d8797-283e-46fd-b402-9cbad9e5ff61">
 
-9. 추가로 application.properties에 설정한 유저의 아이디와 비밀번호를 작성한다.
+10. 추가로 application.properties에 설정한 유저의 아이디와 비밀번호를 작성한다.
     <img width="1075" alt="KakaoTalk_Photo_2023-06-22-22-16-52 002" src="https://github.com/hackersground-kr/WE/assets/87405998/26a3162e-49cd-484d-86a1-56b0cf62110b">
 
-10. project를 실행한다.
+12. project를 실행한다.
 <br>
 
 서버배포
