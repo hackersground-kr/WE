@@ -96,6 +96,7 @@ https://witty-sea-035169410.3.azurestaticapps.net/
 
 6. 리소스 그룹을 정해주고, 데이터베이스 이름을 정하고, 서버를 새로 만든다. 그런 다음, 검토 + 만들기를 누르면 생성이 된다.
     <img width="1440" alt="스크린샷 2023-06-23 오전 8 14 55" src="https://github.com/hackersground-kr/WE/assets/87405998/3fbbd71c-1860-4909-ab64-fe00f59176fb">
+    <img width="1440" alt="스크린샷 2023-06-23 오전 8 11 12" src="https://github.com/hackersground-kr/WE/assets/87405998/0c3917b3-1122-4e5e-b948-8c9541d7eccb">
 
 
 7. 사진에 있는 것처럼 pom.xml에 dependency를 추가한다.
