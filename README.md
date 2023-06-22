@@ -31,7 +31,7 @@
     - cd Front/WE_IN  을 입력해 해당 폴더로 들어간다.
     - npm install
     - npm run build
-    - dist 파일 생성 되었는지 확인 한다 -> .gitignore 파일에서 dist 관련된 파일을 모두 주석처리한다.
+    - dist 파일 생성 되었는지 확인 한다 -> .gitignore 파일에서 dist 관련된 파일을 모두 주석처리한다. (node_modules 밑에 두줄을 주석처리한다)
     - git push 해서 dist 파일이 나의 포크레포지토리에 올라온 것을 확인한다.
 2. https://portal.azure.com/#home 에 접속합니다. (로그인 필요)
 3. 리소스 만들기 -> 웹/앱 만들기로 들어간다
