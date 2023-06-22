@@ -11,6 +11,7 @@ import draw from "../../../assets/draw.jpg";
 import book from "../../../assets/book.jpg";
 // import ReadingGlass from "../../../assets/search.png";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -78,11 +79,13 @@ const Main = () => {
         <header className="Recommend-Title">회원님을 위한 추천 컨텐츠</header>
         <section className="Recommend-Section">
           <ul className="list-Style">
-            <div className="ClickContents1">
-              <img src={Meow} alt="cat" />
-              <h4>고양이와 함께하는 반려동물 원데이클래스</h4>
-              <p>반려동물·고양이 | 김규회수의사</p>
-            </div>
+            <Link to="/register">
+              <div className="ClickContents1">
+                <img src={Meow} alt="cat" />
+                <h4>고양이와 함께하는 반려동물 원데이클래스</h4>
+                <p>반려동물·고양이 | 김규회수의사</p>
+              </div>
+            </Link>
             <div className="ClickContents2">
               <img src={camera} alt="camera" />
               <h4>15년차 프로 포토그래퍼가 알려주는 사진 조명</h4>
