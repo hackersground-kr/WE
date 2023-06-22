@@ -12,8 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { createTheme, ThemeProvider } from "@mui/material";
-
-// import AdbIcon from '@mui/icons-material/Adb';
+import { Navigate, useNavigate } from "react-router-dom";
 
 const pages = ["카테고리", "내 주변 클래스"];
 const settings = ["회원가입", "로그인"];
@@ -21,10 +20,19 @@ const settings = ["회원가입", "로그인"];
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+
+  const MoveMapPage = (index) => {
+    if (index === 1) {
+      navigate("/map");
+    }
+    handleCloseUserMenu();
+  };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -50,7 +58,6 @@ function Header() {
       <AppBar position="fixed">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
               variant="h6"
               noWrap
@@ -104,7 +111,7 @@ function Header() {
                 ))}
               </Menu>
             </Box>
-            {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+
             <Typography
               variant="h5"
               noWrap
@@ -122,11 +129,12 @@ function Header() {
             >
               WE IN
             </Typography>
+
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
+              {pages.map((page, index) => (
                 <Button
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  onClick={() => MoveMapPage(index)}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}
@@ -169,4 +177,5 @@ function Header() {
     </ThemeProvider>
   );
 }
+
 export default Header;
