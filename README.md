@@ -65,6 +65,7 @@
 > **여러분의 제품/서비스를 Microsoft 애저 클라우드에 배포하기 위해 사전에 필요한 준비 사항들을 적어주세요.**
 ### 배포 완성 사진
 [Frontend]
+https://witty-sea-035169410.3.azurestaticapps.net/
 ![image](https://github.com/hackersground-kr/WE/assets/87405971/edaa7c26-8dba-4846-8a5c-b10fda3af1ea)
 
 <br>
@@ -94,7 +95,8 @@
 
 
 6. 리소스 그룹을 정해주고, 데이터베이스 이름을 정하고, 서버를 새로 만든다. 그런 다음, 검토 + 만들기를 누르면 생성이 된다.
-    <img width="1258" alt="스크린샷 2023-06-22 오후 10 18 38" src="https://github.com/hackersground-kr/WE/assets/87405998/d8f7fbff-4f6c-4a4b-9c1c-ce45f3fcb19b">
+    <img width="1440" alt="스크린샷 2023-06-23 오전 8 14 55" src="https://github.com/hackersground-kr/WE/assets/87405998/3fbbd71c-1860-4909-ab64-fe00f59176fb">
+
 
 7. 사진에 있는 것처럼 pom.xml에 dependency를 추가한다.
     <img width="581" alt="KakaoTalk_Photo_2023-06-22-22-16-52 001" src="https://github.com/hackersground-kr/WE/assets/87405998/933a5b41-88dd-4f55-9892-f5c240286553">
@@ -138,6 +140,7 @@
 <br>
 
 ### 배포 완성 사진
+https://wein-server.azurewebsites.net
 <img width="1440" alt="KakaoTalk_Photo_2023-06-22-23-47-11" src="https://github.com/hackersground-kr/WE/assets/87405998/697d90bd-3e47-44ba-b2bd-673f7459ce85">
 
 ### 배포 후 SQL 보는 법
