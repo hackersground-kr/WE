@@ -55,7 +55,6 @@ public class Review {
     public Review update(ReviewModifyRequest reviewModifyRequest) {
         this.title = reviewModifyRequest.getTitle();
         this.description = reviewModifyRequest.getDescription();
-        this.createdTime = reviewModifyRequest.getCreatedTime();
         return this;
     }
 
