@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'wein'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7D19D2286C9424C85161C9008E6805D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A6CCE08D463249DA861235BFFEB86890 }}
           package: '*.jar'
