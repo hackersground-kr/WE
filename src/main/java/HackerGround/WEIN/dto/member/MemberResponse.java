@@ -20,6 +20,7 @@ public class MemberResponse {
         this.loginId = member.getLoginId();
         this.password = member.getPassWord();
         this.birth = member.getBirth();
+        this.gender=member.getMemberType().toString();
     }
 
     public static MemberResponse toDto(Member member) {
