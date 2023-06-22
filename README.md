@@ -98,6 +98,8 @@ https://witty-sea-035169410.3.azurestaticapps.net/
     <img width="1440" alt="스크린샷 2023-06-23 오전 8 14 55" src="https://github.com/hackersground-kr/WE/assets/87405998/3fbbd71c-1860-4909-ab64-fe00f59176fb">
     <img width="1440" alt="스크린샷 2023-06-23 오전 8 11 12" src="https://github.com/hackersground-kr/WE/assets/87405998/0c3917b3-1122-4e5e-b948-8c9541d7eccb">
 
+7. WE 레퍼지토리를 내 레포지토리로 포크 해온다. https://github.com/hackersground-kr/WE/tree/main
+   
 
 7. 사진에 있는 것처럼 pom.xml에 dependency를 추가한다.
     <img width="581" alt="KakaoTalk_Photo_2023-06-22-22-16-52 001" src="https://github.com/hackersground-kr/WE/assets/87405998/933a5b41-88dd-4f55-9892-f5c240286553">
