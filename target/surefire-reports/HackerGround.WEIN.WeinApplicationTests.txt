@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: HackerGround.WEIN.WeinApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.426 s - in HackerGround.WEIN.WeinApplicationTests
