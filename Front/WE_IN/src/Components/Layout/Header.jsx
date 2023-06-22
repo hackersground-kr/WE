@@ -45,6 +45,11 @@ function Header() {
     setAnchorElUser(null);
   };
 
+  const handleSettingsClick = () => {
+    navigate("/login");
+    handleCloseUserMenu();
+  };
+
   const theme = createTheme({
     palette: {
       primary: {
@@ -164,8 +169,11 @@ function Header() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                {settings.map((setting, index) => (
+                  <MenuItem
+                    key={setting}
+                    onClick={index === 1 ? handleSettingsClick : handleCloseUserMenu}
+                  >
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
                 ))}
