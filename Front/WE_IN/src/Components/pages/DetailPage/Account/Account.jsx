@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -14,11 +12,11 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+// TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
-const Login = () => {
-  const navigate = useNavigate();
+const Account = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -44,7 +42,7 @@ const Login = () => {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            로그인
+            회원가입
           </Typography>
           <Box
             component="form"
@@ -72,32 +70,16 @@ const Login = () => {
               id="password"
               autoComplete="current-password"
             />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="로그인 상태 유지"
-            />
+           
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              로그인
+              회원가입하기
             </Button>
-            <Grid container>
-              <Grid item xs>
-               
-                  <Link  variant="body2">
-                    비밀번호를 잊어버리셨나요?
-                  </Link>
-                
-              </Grid>
-              <Grid item>
-                <Link component={RouterLink} to="/Account"variant="body2">
-                  {"계정이 없으신가요?"}
-                </Link>
-              </Grid>
-            </Grid>
+           
           </Box>
         </Box>
       </Container>
@@ -105,4 +87,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Account;

@@ -45,6 +45,16 @@ function Header() {
     setAnchorElUser(null);
   };
 
+  const MoveLoginPage = () => {
+    navigate("/login");
+    handleCloseUserMenu();
+  };
+
+    const MoveAccountPage = () => {
+    navigate("/Account");
+    handleCloseUserMenu();
+  };
+
   const theme = createTheme({
     palette: {
       primary: {
@@ -164,8 +174,11 @@ function Header() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                {settings.map((setting, index) => (
+                  <MenuItem
+                    key={setting}
+                    onClick={index === 1 ? MoveLoginPage : MoveAccountPage}
+                  >
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
                 ))}
