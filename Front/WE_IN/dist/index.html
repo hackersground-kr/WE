@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="./assets/Logo-4f126f39.png" />
-  <!-- kakao map api -->
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7edadd31a39ca6f26096ba49ae13f7df"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WE IN</title>
-  <script type="module" crossorigin src="./assets/index-4b0fc541.js"></script>
-  <link rel="stylesheet" href="./assets/index-f85914e3.css">
-</head>
-
-<body>
-  <div id="root"></div>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/Logo-4f126f39.png" />
+    <!-- kakao map api -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7edadd31a39ca6f26096ba49ae13f7df"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>WE IN</title>
+    <style>
+.customoverlay {position:relative;bottom:85px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
+.customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+.customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #d95050;background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
+.customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
+.customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+</style>
+    <script type="module" crossorigin src="/assets/index-9ffea32a.js"></script>
+    <link rel="stylesheet" href="/assets/index-f85914e3.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+  </body>
 </html>
