@@ -68,9 +68,13 @@
 ![image](https://github.com/hackersground-kr/WE/assets/87405971/edaa7c26-8dba-4846-8a5c-b10fda3af1ea)
 
 <br>
+
 ### [Backend]
+
 <br>
-** 애저 SQL **
+
+애저 SQL
+
 <br>
 1. 애저 포탈에 접속한다. https://portal.azure.com/#home
    <img width="1260" alt="스크린샷 2023-06-22 오후 10 09 00" src="https://github.com/hackersground-kr/WE/assets/87405998/7de332d2-bea4-4ab2-8922-4d51706a1001">
@@ -100,7 +104,7 @@
 15. project를 실행한다.
 <br>
 
-**서버 배포**
+서버배포
 <br>
 1. 팀 리소스 그룹에 접속한다.
 2. 왼쪽 상단의 만들기를 클릭한다.
